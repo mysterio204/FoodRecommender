@@ -8,7 +8,7 @@ You must have [node.js] and its package manager (npm) installed. You can get the
 Just clone the repository and navigate to the directory of the project with your command line.
 To install the Ionic Framework including its dependecies, run:
 ```sh
-npm install -g ionic
+npm install -g ionic cordova
 ```
 
 To run the application in your browser run:
