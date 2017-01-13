@@ -15,4 +15,39 @@
 
 <ion-content padding>
 
+<ion-list>
+  <!-- <ion-card class ="foodcard" *ngFor="let n of numberlist">
+  <img src="http://hcevisuals.com/wp-content/uploads/2015/02/Food-photography-Cafe-Bar-Sandwich.jpg"/>
+  <ion-card-content>
+    <ion-card-title>
+      Sandwich
+      </ion-card-title>
+    <ion-icon name="star"></ion-icon> <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon>
+  </ion-card-content>
+</ion-card> -->
+<ion-card class ="foodcard" *ngFor="let n of numberlist" (click)="openPage()">
+  <div class="image">
+
+        <img src="http://hcevisuals.com/wp-content/uploads/2015/02/Food-photography-Cafe-Bar-Sandwich.jpg" alt="" />
+
+        <h2><span>      <ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon>
+<span class='spacer'></span></span></h2>
+
+
+  </div>
+<ion-card-content>
+  <ion-card-title>
+    Sandwich with tomato and cheese
+    </ion-card-title>
+    <span>
+
+    </span>
+
+</ion-card-content>
+</ion-card>
+</ion-list>
+
+
+  <!-- <button ion-button color="primary" (click)="openPage()">GoTo Page</button> -->
+
 </ion-content>
