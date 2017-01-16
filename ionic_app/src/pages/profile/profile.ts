@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController,ViewController } from 'ionic-angular';
+import { NavController,ViewController, AlertController } from 'ionic-angular';
 
 /*
   Generated class for the Profile page.
@@ -13,24 +13,81 @@ import { NavController,ViewController } from 'ionic-angular';
 })
 export class ProfilePage {
 
-  nutrition : any;
-  allergies : any;
+  profile:any;
+  status:any;
+  labels:any;
 
-  constructor(public navCtrl: NavController, public viewCtrl: ViewController) {
-    this.nutrition = 0;
-    this.allergies = [];
 
-  }
+
+
+  constructor(public navCtrl: NavController, public viewCtrl: ViewController,
+    public alertCtrl: AlertController) {
+    this.status = 1;
+    this.profile={
+      nutrition : 0,
+      level:0,
+      money: 0,
+      time:0,
+      calories:0
+    };
+
+    this.labels = {
+      nutrition : ["Alles Esser", "Vegetarisch", "Vegan"],
+      level : ["Anfänger", "Alltagskoch", "Chefkoch"],
+      money : ["wenig" , "mittel", "viel"],
+      time : ["wenig" , "mittel", "viel"],
+      calories : ["wenig" , "mittel", "viel"],
+    };
+
+
+}
 
   dismiss(){
     this.viewCtrl.dismiss();
   }
 
-  skip(){
-    console.log(this.nutrition);
-    console.log(this.allergies);
+  next(){
+    if(this.status < 6){
+      this.status+=1;
+    }
+  }
 
+  previous(){
+    if(this.status > 1){
+      this.status-=1;
+    }
+  }
+
+  submit(){
+    this.dismiss();
+  }
+
+  showCancelAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Warning!',
+      subTitle: 'Wenn du den Vorgang abbrichst, können wir dir keine persönlichen Rezeptvorschläge anbieten. Bist du sicher, dass du kein Profil erstellen möchtest?',
+      buttons: [
+        {
+          text: 'Nein',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Ja',
+          handler: data => {
+            this.profile = {};
+            this.dismiss();
+          }
+        }
+      ]
+
+    });
+    alert.present();
+  }
+
+  cancel(){
+    this.showCancelAlert();
   }
 
 }
-
