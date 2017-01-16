@@ -6,6 +6,7 @@ import { FavoritenPage } from '../pages/favoriten/favoriten';
 import { VorraetePage } from '../pages/vorraete/vorraete';
 import { EinkaufslistePage } from '../pages/einkaufsliste/einkaufsliste';
 import { FoodDetailPage } from '../pages/food-detail/food-detail';
+import { ProfilePage } from '../pages/profile/profile';
 
 import { TabsPage } from '../pages/tabs/tabs';
 
@@ -17,7 +18,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     VorraetePage,
     EinkaufslistePage,
     FoodDetailPage,
-    TabsPage
+    TabsPage,
+    ProfilePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -30,7 +32,8 @@ import { TabsPage } from '../pages/tabs/tabs';
     VorraetePage,
     EinkaufslistePage,
     FoodDetailPage,
-    TabsPage
+    TabsPage,
+    ProfilePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
