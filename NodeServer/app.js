@@ -63,7 +63,17 @@
             for (var i in res) {
                 var recipe = {
                     recipe_href: res[i].recipe_href,
-                    title: res[i].title
+                    title: res[i].title,
+                    ratingsCount : res[i].Bewertungen,
+                    rating : res[i].numstars,
+                    ratingAvrg : res[i].average,
+                    forPersons : res[i].furPersonen,
+                    img : res[i].img_href,
+                    ingredients : res[i].zutaten,
+                    difficulty : res[i].Schwierigkeitsgrad,
+                    time : res[i].Zubereitungszeit,
+                    money : res[i].Preiskategorie,
+                    kcal : res[i].kcal
                 };
 
                 queryResult.push(recipe);
@@ -110,7 +120,7 @@
 
         server.get("/api/get/all", function (req, res) {
             var proile = req.params[0];
-            queryString = "SELECT * FROM `kochbar_recipes` LIMIT 20";
+            queryString = "SELECT * FROM `kochbar_recipes` ORDER BY average DESC LIMIT 20";
             query(queryString, function (err, data) {
                 res.send(data);
             });

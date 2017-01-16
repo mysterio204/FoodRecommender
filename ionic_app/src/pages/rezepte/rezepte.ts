@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController,NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { RecipeService } from '../../services/recipe-service';
 import { FoodDetailPage } from '../food-detail/food-detail';
 
 
@@ -11,28 +12,34 @@ import { FoodDetailPage } from '../food-detail/food-detail';
 */
 @Component({
   selector: 'page-rezepte',
-  templateUrl: 'rezepte.html'
+  templateUrl: 'rezepte.html',
+  providers : [RecipeService]
 })
 export class RezeptePage {
-item:any;
-numberlist:Array<any>;
-  constructor(public navCtrl: NavController, public navParams:NavParams) {
 
-    this.item={name:"First Food",randomNumer:"555",stars:"4"};
-    this.numberlist=[];
-let numbers = [1,2,3,4,5,6,7,8];
-    for(let n of numbers){
-      this.numberlist.push(n);
-    }
+  item:any;
+  recipesList:Array<any>;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private recipeService: RecipeService) {
+
+      this.recipeService.getAll().subscribe(
+        data => {
+          this.recipesList = data;
+        },
+        err => {
+          console.log(err)
+        },
+          () => console.log("Recipe Search Complete")
+      );
   }
 
   ionViewDidLoad() {
     console.log('Hello RezeptePage Page');
+
   }
-  openPage(event, item,numberlist) {
+  openPage(event, item) {
    this.navCtrl.push(FoodDetailPage, {
-     item: this.item,
-     numberlist:this.numberlist
+     item: this.item
    });
 }
 
