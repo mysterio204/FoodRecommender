@@ -26,7 +26,7 @@ export class MyApp {
     });
   }
   presentModal() {
-    let modal = this.modalCtrl.create(SwiperPage);
+    let modal = this.modalCtrl.create(ProfilePage);
     modal.present();
   }
 }
