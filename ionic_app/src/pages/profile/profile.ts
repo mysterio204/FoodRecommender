@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController,ViewController, AlertController,ModalController } from 'ionic-angular';
 import {SwiperPage} from '../swiper/swiper'
+import { NativeStorage } from 'ionic-native'
 
 /*
   Generated class for the Profile page.
@@ -61,6 +62,13 @@ export class ProfilePage {
   }
 
   submit(){
+
+    NativeStorage.setItem('profile', {'profile' : this.profile})
+      .then(
+        () => console.log('Stored item!'),
+        error => console.error('Error storing item', error)
+      );
+
     this.dismiss(this.profile.nutrition);
   }
 
