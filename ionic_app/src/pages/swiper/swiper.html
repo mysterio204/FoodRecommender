@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Tinder
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+                <span ion-text color="primary" showWhen="ios">Cancel</span>
+                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="home" padding>
+    <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutright)="voteUp(true)" (throwoutleft)="voteUp(false)"
+         id="card-stack">
+        <ion-card #mycards1 swing-card *ngFor="let c of cards">
+            <img *ngIf="c.picture" [src]="c.picture.large"/>
+            <ion-row>
+                <ion-col>
+                    <button ion-button color="primary" round (click)="voteUp(false)">
+                        <ion-icon name="thumbs-down"></ion-icon>
+                        <div>No</div>
+                    </button>
+                </ion-col>
+                <ion-col>
+                    <button ion-button color="primary"  round (click)="voteUp(true)">
+                        <ion-icon name="thumbs-up"></ion-icon>
+                        <div>Yes</div>
+                    </button>
+                </ion-col>
+
+            </ion-row>
+        </ion-card>
+    </div>
+    <p style="text-align: center; width: 100%;">{{ recentCard }}</p>
+</ion-content>

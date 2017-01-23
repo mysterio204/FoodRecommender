@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController,ViewController, AlertController } from 'ionic-angular';
+import { NavController,ViewController, AlertController,ModalController } from 'ionic-angular';
+import {SwiperPage} from '../swiper/swiper'
 
 /*
   Generated class for the Profile page.
@@ -21,7 +22,7 @@ export class ProfilePage {
 
 
   constructor(public navCtrl: NavController, public viewCtrl: ViewController,
-    public alertCtrl: AlertController) {
+    public alertCtrl: AlertController,public modalCtrl:ModalController) {
     this.status = 1;
     this.profile={
       nutrition : 0,
@@ -60,6 +61,9 @@ export class ProfilePage {
 
   submit(){
     this.dismiss();
+    let tinderModal = this.modalCtrl.create(SwiperPage);
+    tinderModal.present();
+
   }
 
   showCancelAlert() {

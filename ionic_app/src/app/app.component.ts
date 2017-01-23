@@ -4,6 +4,8 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import {ProfilePage} from "../pages/profile/profile";
+import {SwiperPage} from '../pages/swiper/swiper'
+import { SwingModule } from 'angular2-swing';
 
 
 @Component({
