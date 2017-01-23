@@ -9,7 +9,7 @@ export class RecipeService {
   url : any;
 
   constructor(private http:Http) {
-    this.url = "http://localhost:3333/api/get";
+    this.url = "http://52.34.99.222:3333/api/get";
   }
 
   getAll() {

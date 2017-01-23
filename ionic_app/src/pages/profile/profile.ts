@@ -46,7 +46,7 @@ export class ProfilePage {
 
   dismiss(nutrition){
     //this.viewCtrl.dismiss();
-    this.navCtrl.setRoot(SwiperPage, {"nutrition" : nutrition});
+    this.navCtrl.setRoot(SwiperPage, {nutrition : nutrition});
   }
 
   next(){

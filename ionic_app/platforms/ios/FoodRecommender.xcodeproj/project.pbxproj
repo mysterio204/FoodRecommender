@@ -21,6 +21,7 @@
 		C1B0AD2D56804AD3A2E666AF /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C13A5CE6C414079A938DE81 /* CDVLogger.m */; };
 		DA631AB442804B528A66A1C0 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0BF53D3D034B63BD78B0F8 /* CDVDevice.m */; };
 		EC305ABB864F4B90BFA58F52 /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE837CA70364FF68FE78322 /* CDVViewController+SplashScreen.m */; };
+		3D21BF12BA054A999A9A140B /* NativeStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF0FCEF6BF74933B96DA9D5 /* NativeStorage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = FoodRecommender/config.xml; sourceTree = "<group>"; };
+		6FF0FCEF6BF74933B96DA9D5 /* NativeStorage.m */ = {isa = PBXFileReference; name = "NativeStorage.m"; path = "cordova-plugin-nativestorage/NativeStorage.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		274E3C786AA4470EA08A24A9 /* NativeStorage.h */ = {isa = PBXFileReference; name = "NativeStorage.h"; path = "cordova-plugin-nativestorage/NativeStorage.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +189,8 @@
 				4D8F535F87E04D4B97E48FE1 /* CDVStatusBar.h */,
 				6D48BDA186B24DC48F749908 /* IonicKeyboard.m */,
 				18D659DC82804A5AAAD44C38 /* IonicKeyboard.h */,
+				6FF0FCEF6BF74933B96DA9D5 /* NativeStorage.m */,
+				274E3C786AA4470EA08A24A9 /* NativeStorage.h */,
 			);
 			name = Plugins;
 			path = FoodRecommender/Plugins;
@@ -314,6 +319,7 @@
 				EC305ABB864F4B90BFA58F52 /* CDVViewController+SplashScreen.m in Sources */,
 				2401B6C0FEB54ECF91CE7F6A /* CDVStatusBar.m in Sources */,
 				5776D16279A349A9B4D408E1 /* IonicKeyboard.m in Sources */,
+				3D21BF12BA054A999A9A140B /* NativeStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
