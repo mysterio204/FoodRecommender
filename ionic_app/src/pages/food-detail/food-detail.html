@@ -7,7 +7,12 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{item.name}}</ion-title>
+    <ion-title>{{recipe.title}}</ion-title>
+    <ion-buttons end>
+      <button class="button" (click)="addToFavorites()">
+        <ion-icon class="favorite" name="heart"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -15,7 +20,70 @@
 
 <ion-content padding class="detailcontainer">
 
-  <img class="detailimage"src="http://hcevisuals.com/wp-content/uploads/2015/02/Food-photography-Cafe-Bar-Sandwich.jpg"/>
-<br>
+  <img class="detailimage" src="{{recipe.img}}"/>
+  <div>
+        <span>
+          <ion-icon *ngIf="recipe.rating > 1" name="star"></ion-icon>
+          <ion-icon *ngIf="recipe.rating > 2" name="star"></ion-icon>
+          <ion-icon *ngIf="recipe.rating > 3" name="star"></ion-icon>
+          <ion-icon *ngIf="recipe.rating > 4" name="star"></ion-icon>
+          <ion-icon *ngIf="recipe.rating == 5" name="star"></ion-icon>
+          <ion-icon *ngIf="recipe.rating < 5" name="star-outline"></ion-icon>
+          <ion-icon *ngIf="recipe.rating < 4" name="star-outline"></ion-icon>
+          <ion-icon *ngIf="recipe.rating < 3" name="star-outline"></ion-icon>
+          <ion-icon *ngIf="recipe.rating < 2" name="star-outline"></ion-icon>
+          <ion-icon *ngIf="recipe.rating < 1" name="star-outline"></ion-icon>
+          <span>({{recipe.ratingsCount}})</span>
+          <span class='spacer'></span>
+        </span>
+  </div>
+
+  <div>
+      <span>
+          <span>Preiskategorie:</span>
+          <ion-icon *ngIf="recipe.money >= 1" name="ios-cash"></ion-icon>
+          <ion-icon *ngIf="recipe.money >= 2" name="ios-cash"></ion-icon>
+          <ion-icon *ngIf="recipe.money >= 3" name="ios-cash"></ion-icon>
+          <ion-icon *ngIf="recipe.money < 2" name="ios-cash-outline"></ion-icon>
+          <ion-icon *ngIf="recipe.money < 3" name="ios-cash-outline"></ion-icon>
+          <span class='spacer'></span>
+      </span>
+  </div>
+
+  <div>
+    <span>
+        Schwierigkeitsgrad: {{recipe.difficulty}}
+    </span>
+    <br>
+    <span>
+        Zubereitungszeit: {{recipe.time}} min
+    </span>
+    <br>
+    <span>
+          Zutaten für {{recipe.forPersons}} Personen
+    </span>
+    <br>
+    <span>
+          Kalorien: {{recipe.kcal}} (kcal/100g)
+    </span>
+  </div>
+
+
+  <div>
+    <table>
+      <tr *ngFor="let ingr of ingredients">
+        <td *ngIf="isIngredient(ingr)">{{ingr[0]}}</td>
+        <td *ngIf="isIngredient(ingr)">{{ingr[1]}}</td>
+        <th *ngIf="!isIngredient(ingr)">{{ingr}}</th>
+      </tr>
+    </table>
+  </div>
+
+
+  <br>
+
+  <button ion-button color="primary" full (click)="cook()">
+      Hilf mir kochen
+  </button>
 
 </ion-content>

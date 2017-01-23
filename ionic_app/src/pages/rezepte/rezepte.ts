@@ -15,6 +15,8 @@ import { FoodDetailPage } from '../food-detail/food-detail';
   templateUrl: 'rezepte.html',
   providers : [RecipeService]
 })
+
+
 export class RezeptePage {
 
   item:any;
@@ -29,18 +31,16 @@ export class RezeptePage {
         err => {
           console.log(err)
         },
-          () => console.log("Recipe Search Complete")
+          () => console.log(this.recipesList[0])
       );
-  }
-
-  ionViewDidLoad() {
-    console.log('Hello RezeptePage Page');
 
   }
+
+
   openPage(event, item) {
-   this.navCtrl.push(FoodDetailPage, {
-     item: this.item
-   });
+     this.navCtrl.push(FoodDetailPage, {
+       recipe: item
+     });
 }
 
 }

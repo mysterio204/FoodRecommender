@@ -72,7 +72,7 @@
                     ingredients : res[i].zutaten,
                     difficulty : res[i].Schwierigkeitsgrad,
                     time : res[i].Zubereitungszeit,
-                    money : res[i].Preiskategorie,
+                    money : parseInt(res[i].Preiskategorie),
                     kcal : res[i].kcal
                 };
 

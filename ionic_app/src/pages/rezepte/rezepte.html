@@ -16,7 +16,7 @@
 <ion-content padding>
 
 <ion-list>
-    <ion-card class ="foodcard" *ngFor="let recipe of recipesList" (click)="openPage()">
+    <ion-card class ="foodcard" *ngFor="let recipe of recipesList" (click)="openPage(event, recipe)">
         <div class="image">
           <img src="{{recipe.img}}" alt="" />
           <h2>
