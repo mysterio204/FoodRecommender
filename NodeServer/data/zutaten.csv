@@ -1,19 +1,30 @@
-day,meal
-18. Mai,Seitan-Schnitzel
-19. Mai,Tomatensuppe
-20. Mai,Chinawok mit Reis
-21. Mai,Grüne Nudeln
-22. Mai,Frühlingsrollen
-27. Mai,Pasta mit grünem Spargel
-28. Mai,Nudeln mit Tomatensoße
-29. Mai,Pasta Ratatouille
-1. Juni,Gemüsefrikadellen mit Käsesoße
-2. Juni,Kartoffeltaschen
-3. Juni,Nudeln mit Tomatensoße
-4. Juni,Gnocchi mit Basilikumpesto
-5. Juni,Käsespätzle
-8. Juni,Feuriger Tofu-Gulasch
-9. Juni,Gründe Nudeln
-10. Juni,Tomatensuppe
-11. Juni,Chinawok mit Reis
-12. Juni,Frühlingsrollen
+Zutat,Ids,Bezeichnung,Kategorie,Bild
+Ei,5; 15; 21; 44; 81,Eier; Ei; Eigelb; Eiweiss; Eier Freiland,1,eggs.png
+Zwiebel,10; 19; 45; 72; 91,Zwiebel; Zwiebeln; Zwiebel gewürfelt; Zwiebel frisch; Zwiebeln gehackt,2,onions.png
+Fisch,298; 645; 1011; 1020; 1649,Fischfond; thunfisch; Fischfilet frisch; Thunfisch konserveabgetropft; Thunfisch in Öl,0,fish.png
+Tomaten,23; 29; 111; 174; 191,Tomatenmark; Tomaten; Kirschtomaten; passierte Tomaten; Tomate,2,tomatoes.png
+Kartoffeln,27; 134; 230; 251; 343,Kartoffeln; Kartoffeln festkochend; Kartoffel; Kartoffeln mehlig Pellkartoffeln,2,potatoes.png
+Karotten,69; 245; 741; 2168; 2869,Karotten; Karotte; Karotten gewürfelt; Karotten in scheibengeschnitten; Karotten gerieben,2,carrots.png
+Hackfleisch,39; 177; 252; 365; 725,Hackfleisch gemischt; Hackfleisch; Rinderhackfleisch; gemischtes Hackfleisch; Rind Hackfleisch frisch,0,minced-meat.png
+Champignons,42; 135; 296; 870; 1187,Champignons; Champignons frisch; Champignons braun; firsche Champignons; Champignons konserveabgetropft,2,mushrooms.png
+Zucchini,46; 328; 1283; 1292; 2238,Zucchini; Zucchini frisch; Zucchini grün; kleine Zucchini; Zucchini gelb,2,zucchini.png
+Frühlingszwiebeln,65; 197; 349; 795; 3126,Frühlingszwiebeln; Frühlingszwiebel; Frühlingszwiebeln frisch; Frühlingszwiebel frisch; geschnitten; Frühlingszwiebeln in ringegeschnitten,2,spring-onions.png
+Lauch,66; 451,Lauch; Lauchstange,2,leeks.png
+Paprika,48; 86; 100; 119; 247,Paprika edelsüss; Paprika rot; Paprika; rote Paprika; Paprikaschoten,2,peppers.png
+Nudeln,133; 173; 700; 710; 749,Nudeln; Bandnudeln; Spiralnudeln; Glasnudeln; Nudeln Penne,1,noddles.png
+Reis,104; 255; 464; 614; 685,Reis; Langkornreis; Basmati-Reis; Risotto-Reis; Milchreis,2,rice.png
+Parmesan,102; 107; 392; 504; 621,Parmesan; Parmesan gerieben; Parmesan frisch gerieben; geriebener Parmesan; Parmesan gehobelt,1,parmesan.png
+Käse,73; 115; 154; 234; 243,Frischkäse; Käse gerieben; Schafskäse; geriebener Käse; Schmelzkäse,1,cheese.png
+Schweinefleisch,122; 314; 450; 667; 849,Schweinefilet; Schweineschnitzel; Schweinefleisch; Schweinemett; Schweinegulasch,0,pork.png
+Hähnchenfleisch,125; 332; 347; 641; 910,Hähnchenbrustfilet; Hähnchenbrustfilets; Hähnchenbrust; Hähnchenschenkel; Hähnchen,0,chicken.png
+Mais,130; 819; 1129; 1688; 1767,Mais; Meismehl; Maiskörner aus der Dose; Maiskörner; Dose Mais,2,corn.png
+Mozzarella,138; 980; 1042; 2181; 2727,Mozzarella; Büffelmozzarella; Mozzarella gerieben; Mozzarella Minis; Mini-Mozzarella-Kugeln,1,mozzarella.png
+Schinken,166; 172; 176; 216; 371,gekochter Schinken; Kochschinken; Schinken gekocht; Schinkenwürfel; Schinken,0,ham.png
+Schafskäse,154; 4206; 6729; 9315; 9374,Schafskäse; Schafskäse Bulgarisch; Schafskäse gewürfelt; Schafskäse Feta; Schafskäse-Würfeln,1,feta.png
+Rindfleisch,193; 303; 411; 461; 600,Rinderhack; Rinderhackfleisch; Rindfleisch; Rinderfilet; Rindergulasch,0,beef.png
+Sojasauce,89; 267; 304; 662,Sojasosse; Sojasauce; Sojasosse dunkel; Sojasosse hell,2,soy-sauce.png
+Meeresfrüchte,2580 ;9041; 13005; 14281; 24007,Meeresfrüchte; Meeresfrüchte tk; gemischte Meeresfrüchte; Meeresfrüchte tiefkühlbehandelt; Meeresfrüchte frisch,0,seafood.png
+Broccoli,292; 771; 1806; 2601; 4104,Broccoli frisch; Broccoli; Broccoli tiefgefroren; Broccoliröschen; Broccoli frisch gegart,2,broccoli.png
+Erbsen,235; 335; 658; 1044; 1055,Erbsen; Erbsen grün tiefgefroren; tk-Erbsen; tk Erbsen; Erbsen tk,2,pease.png
+Feldsalat,331; 1548; 12795; 13703; 17225,Feldsalat; Feldsalat frisch; Feldsalat geputzt; handvoll Feldsalat; hand voll Feldsalat,2,lamb's-lettuce.png
+Salatgurke,99; 903; 3320; 5562; 5569,Salatgurke; Salatgurken; kleine Salatgurke; grosse Salatgurke; Salatgurke klein,2,cucumber.png

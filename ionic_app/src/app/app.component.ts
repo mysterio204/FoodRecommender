@@ -12,7 +12,10 @@ import { SwingModule } from 'angular2-swing';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = TabsPage;
+  //TODO: IF LOCALSTORAGE HAT INHALT:
+  //FIXME rootPage = TabsPage;
+  //TODO: IF LOCALSTORAGE EMPTY
+  rootPage = ProfilePage;
 
 
   constructor(platform: Platform, public modalCtrl:ModalController) {
@@ -21,10 +24,12 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
       Splashscreen.hide();
-    this.presentModal();
+      //this.presentModal();
 
     });
   }
+
+
   presentModal() {
     let modal = this.modalCtrl.create(ProfilePage);
     modal.present();

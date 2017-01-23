@@ -15,13 +15,13 @@
     var server = express();
 
     /* mensa data */
-    var data = {};
+    var zutaten = {};
 
     /* configuration */
     var PORT = 3333;
     var WWW = path.join(__dirname, "./www/");
     var DATA = path.join(__dirname, "./data/");
-    //var ZUTATEN = path.join(DATA, "zutaten.csv");
+    var ZUTATEN = path.join(DATA, "zutaten.csv");
 
 
     var connection = null;
@@ -53,6 +53,25 @@
         });
 
     }
+
+    function initData(){
+      var Converter = csvtojson.core.Converter,
+        fileStream = fs.createReadStream(ZUTATEN),
+        csvConverter = new Converter({
+          constructResult: true
+        });
+      csvConverter.on("end_parsed", function (jsonArray) {
+        for (var i = 0; i < jsonArray.length; i++) {
+          jsonArray[i].Ids = jsonArray[i].Ids.split(";");
+          jsonArray[i].Bezeichnung = jsonArray[i].Bezeichnung.split(";");
+
+        }
+        zutaten = jsonArray;
+      });
+      fileStream.pipe(csvConverter);
+    }
+
+
 
     function query(queryString, callback) {
         connection.query(queryString, function (err, res, fields) {
@@ -119,18 +138,38 @@
         });
 
         server.get("/api/get/all", function (req, res) {
-            var proile = req.params[0];
+            var profile = req.params[0];
             queryString = "SELECT * FROM `kochbar_recipes` ORDER BY average DESC LIMIT 20";
             query(queryString, function (err, data) {
                 res.send(data);
             });
 
         });
-        server.get("/api/get/zutaten", function (req, res) {
-            var proile = req.params[0];
-            res.send(ZUTATEN);
+
+        server.get("/api/get/zutaten/*", function (req, res) {
+            var type = req.params[0];
+            if(type == -1 || type == 0) {
+              res.send(zutaten);
+            }
+            if(type == 1){
+              var veggy = zutaten.filter(isVeggy);
+              res.send(veggy);
+            }
+            if(type == 2){
+              var vegan = zutaten.filter(isVegan);
+              res.send(vegan);
+            }
 
         });
+
+        function isVeggy(val){
+            return val.Kategorie >= 1;
+        }
+
+        function isVegan(val){
+          return val.Kategorie == 2;
+        }
+
         server.get("/api/get/single/*", function (req, res) {
             var id = req.params[0];
             var proile = req.params[0];
@@ -160,5 +199,6 @@
     }
 
     initConnection();
+    initData();
     start();
 }());

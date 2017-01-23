@@ -43,8 +43,9 @@ export class ProfilePage {
 
 }
 
-  dismiss(){
-    this.viewCtrl.dismiss();
+  dismiss(nutrition){
+    //this.viewCtrl.dismiss();
+    this.navCtrl.setRoot(SwiperPage, {"nutrition" : nutrition});
   }
 
   next(){
@@ -60,10 +61,7 @@ export class ProfilePage {
   }
 
   submit(){
-    this.dismiss();
-    let tinderModal = this.modalCtrl.create(SwiperPage);
-    tinderModal.present();
-
+    this.dismiss(this.profile.nutrition);
   }
 
   showCancelAlert() {
@@ -81,7 +79,7 @@ export class ProfilePage {
           text: 'Ja',
           handler: data => {
             this.profile = {};
-            this.dismiss();
+            this.dismiss(-1);
           }
         }
       ]

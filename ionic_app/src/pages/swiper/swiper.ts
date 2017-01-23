@@ -1,6 +1,8 @@
 import { Component, ViewChild, ViewChildren, QueryList } from '@angular/core';
-import { NavController,ViewController } from 'ionic-angular';
+import { NavController,ViewController, AlertController, NavParams} from 'ionic-angular';
 import { Http } from '@angular/http';
+import { RecipeService } from '../../services/recipe-service';
+import { TabsPage } from '../tabs/tabs';
 import 'rxjs/Rx';
 
 import {
@@ -16,18 +18,41 @@ import {
 
 @Component({
     selector: 'page-swiper',
-    templateUrl: 'swiper.html'
+    templateUrl: 'swiper.html',
+    providers : [RecipeService]
 })
 export class SwiperPage {
     @ViewChild('myswing1') swingStack: SwingStackComponent;
     @ViewChildren('mycards1') swingCards: QueryList<SwingCardComponent>;
 
-    cards: Array<any>;
     stackConfig: StackConfig;
-    recentCard: string = '';
+    ingrList : Array<any>;
+    likeList : Array<any>;
+    dislikeList : Array<any>;
+    nutrition : any;
 
-    constructor(public navCtrl: NavController, private http: Http,public viewCtrl: ViewController) {
-        this.stackConfig = {
+    constructor(public navCtrl: NavController, private http: Http,public viewCtrl: ViewController,
+                public recipeService : RecipeService, public alertCtrl: AlertController,
+                public navParams : NavParams) {
+
+      this.nutrition = navParams.get("nutrition");
+
+      this.likeList = [];
+      this.dislikeList = [];
+
+      this.recipeService.getIngredients(this.nutrition).subscribe(
+        data => {
+          this.ingrList = data;
+        },
+        err => {
+          console.log(err)
+        },
+        () => console.log(this.ingrList)
+      );
+
+
+
+      this.stackConfig = {
             throwOutConfidence: (offset, element) => {
                 return Math.min(Math.abs(offset) / (element.offsetWidth/2), 1);
             },
@@ -46,8 +71,6 @@ export class SwiperPage {
             event.target.style.background = '#ffffff';
         });
 
-        this.cards = [{email: ''}];
-        this.addNewCards(1);
     }
 
     // Called whenever we drag an element
@@ -69,25 +92,64 @@ export class SwiperPage {
 
     // Connected through HTML
     voteUp(like: boolean) {
-        let removedCard = this.cards.pop();
-        this.addNewCards(1);
+        let removedCard = this.ingrList.pop();
         if (like) {
-            this.recentCard = 'You liked: ' + removedCard.email;
+          this.likeList.push(removedCard.Ids);
         } else {
-            this.recentCard = 'You disliked: ' + removedCard.email;
+          this.dislikeList.push(removedCard.Ids);
+        }
+        if(this.ingrList.length === 0){
+          this.showFinishedAlert();
+        }
+        if(this.likeList.length === 10 || this.dislikeList.length === 10){
+            this.showReadyAlert();
         }
     }
 
-    // Add new cards to our array
-    addNewCards(count: number) {
-        this.http.get('https://randomuser.me/api/?results=' + count)
-            .map(data => data.json().results)
-            .subscribe(result => {
-                for (let val of result) {
-                    this.cards.push(val);
-                }
-            })
+
+  showFinishedAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Vielen Dank',
+      subTitle: 'Du hast genügend Zutaten bewertet. Jetzt gehts los!',
+      buttons: [
+        {
+          text: 'Ok',
+          handler: data => {
+            this.dismiss();
+          }
+        }
+      ]
+
+    });
+    alert.present();
+  }
+
+
+    showReadyAlert() {
+      let alert = this.alertCtrl.create({
+        title: 'Das reicht erstmal!',
+        subTitle: 'Du hast genügend Zutaten bewertet. Du kannst allerdings auch weiter bewerten.',
+        buttons: [
+          {
+            text: 'Weiter',
+            handler: data => {
+              console.log('Cancel clicked');
+            }
+          },
+          {
+            text: 'Reicht',
+            handler: data => {
+              console.log(this.likeList);
+              console.log(this.dislikeList);
+              this.dismiss();
+            }
+          }
+        ]
+
+      });
+      alert.present();
     }
+
 
     // http://stackoverflow.com/questions/57803/how-to-convert-decimal-to-hex-in-javascript
     decimalToHex(d, padding) {
@@ -101,7 +163,11 @@ export class SwiperPage {
         return hex;
     }
     dismiss(){
-        this.viewCtrl.dismiss();
+      this.navCtrl.setRoot(TabsPage);
+    }
+
+    skip(){
+      this.ingrList.pop();
     }
 
 

@@ -17,4 +17,10 @@ export class RecipeService {
     var response = this.http.get(request).map(res => res.json());
     return response;
   }
+
+  getIngredients(ingr){
+    var request = this.url + "/zutaten/" + ingr;
+    var response = this.http.get(request).map(res => res.json());
+    return response;
+  }
 }
