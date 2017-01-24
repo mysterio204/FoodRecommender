@@ -15,7 +15,7 @@
     <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutright)="voteUp(true)" (throwoutleft)="voteUp(false)"
          id="card-stack">
         <ion-card #mycards1 swing-card *ngFor="let ingr of ingrList">
-            <img  src="../assets/ingr_img/{{ingr.Bild}}"/>
+            <img  src="./assets/ingr_img/{{ingr.Bild}}"/>
             <h1>{{ingr.Zutat}}</h1>
         </ion-card>
     </div>
