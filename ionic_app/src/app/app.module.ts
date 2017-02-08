@@ -8,6 +8,8 @@ import { EinkaufslistePage } from '../pages/einkaufsliste/einkaufsliste';
 import { FoodDetailPage } from '../pages/food-detail/food-detail';
 import { ProfilePage } from '../pages/profile/profile';
 import {SwiperPage} from '../pages/swiper/swiper'
+import{ FavoriteProvider } from '../providers/favorite-provider';
+
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { SwingModule } from 'angular2-swing';
@@ -40,7 +42,7 @@ import { SwingModule } from 'angular2-swing';
     ProfilePage,
     SwiperPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}],
+  providers: [FavoriteProvider,{provide: ErrorHandler, useClass: IonicErrorHandler}],
 
 })
 export class AppModule {}

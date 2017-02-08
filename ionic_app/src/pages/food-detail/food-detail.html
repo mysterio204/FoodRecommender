@@ -9,9 +9,9 @@
   <ion-navbar>
     <ion-title>{{recipe.title}}</ion-title>
     <ion-buttons end>
-      <button class="button" (click)="addToFavorites()">
-        <ion-icon class="favorite" name="heart"></ion-icon>
-      </button>
+        <button ion-button icon-only [color]= "!details.favorite ? 'grey':'danger'" (click)="toggleFavorites(details)">
+            <ion-icon name="heart" ></ion-icon>
+        </button>
     </ion-buttons>
   </ion-navbar>
 
