@@ -15,4 +15,39 @@
 
 <ion-content padding>
 
+<ion-list>
+
+		<ion-card class ="foodcard">
+			<div class="bar bar-header item-input">
+				<ion-row>
+					<ion-col width-40>
+						<ion-input type="text" placeholder="Einkauf hinzufügen" ng-model="VorraetePage" [value]="newGrocery" [(ngModel)]="newGrocery">
+						</ion-input>
+					</ion-col>
+					<ion-col width-40>
+						<ion-input type="text" placeholder="Menge" ng-model="VorraetePage"  [value]="newAmount" [(ngModel)]="newAmount">
+						</ion-input>
+					</ion-col>
+					<ion-col width-20>
+						<button ion-button (click)="addGrocery()">
+							Hinzufügen
+						</button>
+					</ion-col>
+				</ion-row>
+			</div>
+		</ion-card>
+
+		<ion-card class ="foodcard" *ngFor="let item of itemlist">
+			<ion-row>
+				<ion-col width-10><ion-label><ion-toggle color="green"></ion-toggle></ion-label></ion-col>
+				<ion-col width-40><ion-label>{{item.name}}</ion-label></ion-col>
+				<ion-col width-10><ion-label><ion-icon name="add-circle" (click)="increaseGrocery(item.id)"></ion-icon></ion-label></ion-col>
+				<ion-col width-20><ion-label>{{item.menge}}</ion-label></ion-col>
+				<ion-col width-10><ion-label><ion-icon name="remove-circle" (click)="reduceGrocery(item.id)"></ion-icon></ion-label></ion-col>
+				<ion-col width-10><ion-label><ion-icon name="trash" (click)="deleteGrocery(item.id)"></ion-icon></ion-label></ion-col>
+			</ion-row>
+		</ion-card>
+
+	</ion-list>
+
 </ion-content>
