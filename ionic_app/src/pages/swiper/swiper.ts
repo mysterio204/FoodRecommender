@@ -167,8 +167,32 @@ export class SwiperPage {
     }
 
     skip(){
-      this.ingrList.pop();
+      let alert = this.alertCtrl.create({
+        title: 'Warning!',
+        subTitle: 'Wenn du den Vorgang abbrichst, können wir dir keine persönlichen Rezeptvorschläge anbieten. Bist du sicher, dass du keine Zutaten bewerten willst?',
+        buttons: [
+          {
+            text: 'Nein',
+            handler: data => {
+              console.log('Cancel clicked');
+            }
+          },
+          {
+            text: 'Ja',
+            handler: data => {
+              this.likeList = [];
+              this.dislikeList = [];
+              this.dismiss();
+            }
+          }
+        ]
+
+      });
+      alert.present();
     }
 
+    skipIngr(){
+      this.ingrList.pop();
+    }
 
 }

@@ -1,40 +1,47 @@
 <ion-header>
     <ion-toolbar>
         <ion-title>
-            Tinder
+            Zutaten Bewertung
         </ion-title>
-        <ion-buttons start>
-            <button ion-button (click)="dismiss()">
-                <span ion-text color="primary" showWhen="ios">Cancel</span>
-                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
-            </button>
-        </ion-buttons>
+      <ion-buttons start>
+        <img class="header-icon" src="./assets/foodicon.png" />
+      </ion-buttons>
     </ion-toolbar>
 </ion-header>
+
 <ion-content class="home" padding>
     <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutright)="voteUp(true)" (throwoutleft)="voteUp(false)"
          id="card-stack">
         <ion-card #mycards1 swing-card *ngFor="let ingr of ingrList">
-            <img  src="./assets/ingr_img/{{ingr.Bild}}"/>
-            <h1>{{ingr.Zutat}}</h1>
+          <div class="ingr">
+            <img  class="ingr-img" src="./assets/ingr_img/{{ingr.Bild}}"/>
+            <h1 class="ingr-label">{{ingr.Zutat}}</h1>
+          </div>
         </ion-card>
     </div>
 
 
-  <ion-row class="like-buttons">
+  <ion-row class="tinder-buttons">
     <ion-col>
-      <button ion-button color="primary" round (click)="voteUp(false)">
-        <ion-icon name="thumbs-down"></ion-icon>
-        <div>No</div>
-      </button>
+      <div class="dismiss-button" (click)="voteUp(false)">
+        <ion-icon class="dismiss" name="add-circle"></ion-icon>
+      </div>
     </ion-col>
     <ion-col>
-      <button ion-button color="primary"  round (click)="voteUp(true)">
-        <ion-icon name="thumbs-up"></ion-icon>
-        <div>Yes</div>
-      </button>
+      <div class="skip-button" (click)="skipIngr()">
+        <ion-icon name="skip-forward"></ion-icon>
+      </div>
     </ion-col>
-  </ion-row>
-  <a (click)="skip()">Überspringen</a>
 
+    <ion-col>
+      <div class="like-button" (click)="voteUp(true)">
+        <ion-icon name="heart"></ion-icon>
+      </div>
+    </ion-col>
+
+  </ion-row>
+
+  <div class="skip">
+    <button ion-button full clear (click)="skip()">Überspringen</button>
+  </div>
 </ion-content>

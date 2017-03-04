@@ -125,13 +125,9 @@ page-profile {
     width: 100%;
   }
 
-  .header-icon{
-    width: auto;
-    height: 40px;
+  .toolbar-ios ion-title{
+    border-bottom: 1px solid rgba(70,70,70, 0.3);
   }
 
-  .toolbar-ios ion-title{
-   border-bottom: 1px solid rgba(70,70,70, 0.3);
- }
 
 }
