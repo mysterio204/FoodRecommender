@@ -94,3 +94,37 @@ page-rezepte {
   margin-top: 10px;
   display: inline-block;
 }
+
+
+.alert-info{
+  color: #ef7366;
+  float: left;
+  font-size: 50px;
+}
+
+.alert-label{
+  float:left;
+  font-size: 20px;
+  line-height: 3;
+  padding-left: 10px;
+}
+
+.alert-header{
+  padding-bottom: 0px;
+}
+
+.alert-buttons{
+  width: 100%;
+}
+
+.alert-btn,
+.alert-not-now{
+  float: right;
+  width: 50%;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.alert-not-now{
+  width: 45%;
+}

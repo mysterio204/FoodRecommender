@@ -36,7 +36,7 @@ export class SwiperPage {
                 public navParams : NavParams) {
 
       this.nutrition = navParams.get("nutrition");
-
+      
       this.likeList = [];
       this.dislikeList = [];
 

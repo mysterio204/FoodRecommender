@@ -16,6 +16,57 @@
 <ion-content padding>
 
 <ion-list>
+
+  <ion-card *ngIf="ingrEmpty && !profileEmpty && !dismiss">
+    <ion-card-header class="alert-header">
+      <ion-icon class="alert-info" name="alert"></ion-icon>
+      <span class="alert-label">Hinweis</span>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="alert-contet">
+        Du hast keine Zutaten bewertert. Hilf uns dabei deine Vorschläge zu verbessern.
+      </div>
+      <div class="alert-buttons">
+        <button class="alert-btn" ion-button (click)="toIngre()">Los!</button>
+        <button class="alert-not-now" ion-button clear (click)="notNow()">Jetzt nicht</button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="!ingrEmpty && profileEmpty && !dismiss">
+    <ion-card-header class="alert-header">
+      <ion-icon class="alert-info" name="alert"></ion-icon>
+      <span class="alert-label">Hinweis</span>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="alert-contet">
+        Du hast kein Nutzerprofil angelegt. Hilf uns dabei deine Vorschläge zu verbessern.
+      </div>
+      <div class="alert-buttons">
+        <button class="alert-btn" ion-button (click)="toProfile()">Los!</button>
+        <button class="alert-not-now" ion-button clear (click)="notNow()">Jetzt nicht</button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card *ngIf="profileEmpty && ingrEmpty && !dismiss">
+    <ion-card-header class="alert-header">
+      <ion-icon class="alert-info" name="alert"></ion-icon>
+      <span class="alert-label">Hinweis</span>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="alert-contet">
+        Wir wissen nichts über dich! Hilf uns dabei deine Vorschläge zu verbessern.
+      </div>
+      <div class="alert-buttons">
+        <button class="alert-btn" ion-button (click)="toProfile()">Los!</button>
+        <button class="alert-not-now" ion-button clear (click)="notNow()">Jetzt nicht</button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+
   <h2 class="list-heading">Deine Vorschläge</h2>
 
     <ion-card class ="foodcard" *ngFor="let recipe of recipesList" (click)="openPage(event, recipe)">
