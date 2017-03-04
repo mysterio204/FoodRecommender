@@ -1,53 +1,96 @@
 page-rezepte {
-ion-content{
+  ion-content {
+
+  }
+
+  .toolbar-background,
+  .toolbar-title {
+    background-color: #659D32 !important;
+  }
 
 }
 
-
-.toolbar-background,
-.toolbar-title{
-  background-color: #659D32	 !important;
-}
-
-}
-
-.foodcard{
-  width:90%;
+.foodcard {
+  width: 90%;
 
   margin-left: auto;
   margin-right: auto;
   //float: left;
   margin-top: 15px;
 }
-.card-md{
+
+.card-md {
+
+  ion-card-title {
+    // font-size: 10px;
+  }
+  .image {
+    position: relative;
+    width: 100%; /* for IE 6 */
+  }
+
+  h2 {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+  }
+  h2 span {
+    color: white;
+    font: bold 16px/20px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    padding-bottom: 7px;
+  }
+  h2 span.spacer {
+    padding: 0 5px;
+    background: rgba(0, 0, 0, 0); /* fallback color */
+
+  }
 
 
-ion-card-title{
-  // font-size: 10px;
-}
-.image {
-   position: relative;
-   width: 100%; /* for IE 6 */
 }
 
-h2 {
-   position: absolute;
-   bottom: 5px;
-   left: 0;
-   width: 100%;
-}
-h2 span {
-   color: white;
-   font: bold 16px/20px Helvetica, Sans-Serif;
-   letter-spacing: -1px;
-   background: rgb(0, 0, 0); /* fallback color */
-   background: rgba(0, 0, 0, 0.7);
-   padding: 10px;
-   padding-bottom: 7px;
-}
-h2 span.spacer {
-   padding:0 5px;
-   background: rgba(0, 0, 0,0); /* fallback color */
 
+.rating{
+  font-size: 10px;
+  color: #659D32;
+  margin-right: 20px;
 }
+
+.money,
+.level,
+.time{
+  width: 30px;
+  display: inline-block;
+  height: 30px;
+  float: left;
+  margin-right: 5px;
+  padding: 5px 5px;
+  border: 1px solid #659D32;
+  border-radius: 30px;
+}
+
+
+.time-recipe-label,
+.money-recipe-label,
+.level-recipe-label{
+  float: left;
+  margin-right: 10px;
+  line-height: 2.3;
+}
+
+.money-recipe-img,
+.level-recipe-img,
+.time-recipe-img{
+  width: 20px;
+  height: auto;
+}
+
+.info{
+  width: 100%;
+  margin-top: 10px;
+  display: inline-block;
 }
