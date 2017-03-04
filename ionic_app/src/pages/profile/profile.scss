@@ -1,3 +1,137 @@
+
+
 page-profile {
+
+  ion-list>ion-item,
+  .item-inner{
+    border: none !important;
+  }
+
+
+  ion-header,
+  ion-toolbar,
+  ion-title,
+  .toolbar-background-md{
+    background-color: white;
+  }
+
+
+
+  .nutritionlist,
+  .levellist,
+  .moneylist,
+  .timelist,
+  .calorieslist{
+    margin-top: 10%;
+  }
+
+  .list-heading{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+
+  .nutritiontype,
+  .leveltype,
+  .moneytype,
+  .timetype,
+  .caloriestype{
+    opacity: 0.5;
+    padding-left: 20%;
+  }
+
+  .radio-icon{
+    display: none !important;
+  }
+
+  .nutrition-img,
+  .level-img,
+  .money-img,
+  .time-img,
+  .calories-img{
+    width: 60px;
+    height: auto;
+    padding: 10px 10px;
+  }
+
+  .cal-low{
+    padding: 18px 18px;
+  }
+
+  .cal-mid{
+    padding: 14px 14px;
+  }
+
+
+  .nutrition-img-container,
+  .level-img-container,
+  .money-img-container,
+  .time-img-container,
+  .calories-img-container{
+    width: 60px;
+    height: 60px;
+    float: left;
+    border: 2px solid white;
+    border-radius: 60px;
+  }
+
+  .nutrition-label,
+  .level-label,
+  .money-label,
+  .time-label,
+  .calories-label{
+      padding-top: 20px;
+      padding-left: 20px;
+      float: left;
+  }
+
+  .item-radio-checked ion-label>.nutrition-img-container,
+  .item-radio-checked ion-label>.level-img-container,
+  .item-radio-checked ion-label>.money-img-container,
+  .item-radio-checked ion-label>.time-img-container,
+  .item-radio-checked ion-label>.calories-img-container{
+    border-color: #659D32;
+  }
+
+  .item-radio-checked{
+    opacity: 1;
+  }
+
+  .bottom-buttons{
+    bottom: 5%;
+    position: absolute;
+    width: 92%;
+  }
+
+  .bold{
+    font-weight: 900;
+  }
+
+  .picked-heading{
+    margin-bottom: 13px;
+    font-size: 12px;
+  }
+
+  .uebersicht-entry{
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+    text-align:center;
+  }
+
+  .uebersicht-entry:last-of-type{
+    border-bottom: none !important;
+  }
+
+  .backbutton{
+    width: 100%;
+  }
+
+  .header-icon{
+    width: auto;
+    height: 40px;
+  }
+
+  .toolbar-ios ion-title{
+   border-bottom: 1px solid rgba(70,70,70, 0.3);
+ }
 
 }

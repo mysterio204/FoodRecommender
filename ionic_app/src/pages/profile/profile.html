@@ -10,10 +10,7 @@
       Dein Nutzerprofil
     </ion-title>
     <ion-buttons start>
-      <button ion-button (click)="dismiss()">
-        <span ion-text color="primary" showWhen="ios">Cancel</span>
-        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
-      </button>
+      <img class="header-icon" src="./assets/foodicon.png" />
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -22,131 +19,228 @@
 <ion-content padding>
 
   <div *ngIf="status == 1">
-    <ion-list radio-group [(ngModel)] = "profile.nutrition">
-    <ion-list-header>Ernährungstyp</ion-list-header>
-      <ion-item>
-        <ion-label>Alles Esser</ion-label>
+    <ion-list class="nutritionlist" radio-group [(ngModel)] = "profile.nutrition">
+      <h2 class="list-heading">Dein Ernährungstyp</h2>
+      <ion-item class="nutritiontype">
+        <ion-label>
+          <div class="nutrition-img-container">
+            <img class="nutrition-img" src="./assets/profile/all.png"/>
+            </div>
+          <span class="nutrition-label">Alles Esser</span>
+        </ion-label>
         <ion-radio checked="true" value="0"></ion-radio>
       </ion-item>
 
-      <ion-item>
-        <ion-label>Vegetarisch</ion-label>
+      <ion-item class="nutritiontype">
+        <ion-label>
+          <div class="nutrition-img-container">
+            <img class="nutrition-img" src="./assets/profile/veggy.png"/>
+          </div>
+          <span class="nutrition-label">Vegetarisch</span>
+        </ion-label>
         <ion-radio value="1"></ion-radio>
       </ion-item>
 
-      <ion-item>
-        <ion-label>Vegan</ion-label>
+      <ion-item class="nutritiontype">
+        <ion-label>
+          <div class="nutrition-img-container">
+            <img class="nutrition-img" src="./assets/profile/vegan.png"/>
+          </div>
+          <span class="nutrition-label">Vegan</span>
+        </ion-label>
         <ion-radio value="2"></ion-radio>
       </ion-item>
     </ion-list>
   </div>
 
   <div *ngIf="status == 2">
-    <ion-list radio-group [(ngModel)] = "profile.level">
-      <ion-list-header>Auf welchem Level möchtest du kochen?</ion-list-header>
-      <ion-item>
-        <ion-label>Anfänger</ion-label>
+    <ion-list class="levellist" radio-group [(ngModel)] = "profile.level">
+      <h2 class="list-heading">Dein Kochlevel</h2>
+
+      <ion-item class="leveltype">
+        <ion-label>
+          <div class="level-img-container">
+            <img class="level-img" src="./assets/profile/cooking-level-low.png"/>
+          </div>
+          <span class="level-label">Anfänger</span>
+        </ion-label>
         <ion-radio checked="true" value="0"></ion-radio>
       </ion-item>
 
-      <ion-item>
-        <ion-label>Alltagskoch</ion-label>
+      <ion-item class="leveltype">
+        <ion-label>
+          <div class="level-img-container">
+            <img class="level-img" src="./assets/profile/cooking-level-mid.png"/>
+          </div>
+          <span class="level-label">Alltagskoch</span>
+        </ion-label>
         <ion-radio value="1"></ion-radio>
       </ion-item>
 
-      <ion-item>
-        <ion-label>Chefkoch</ion-label>
+      <ion-item class="leveltype">
+        <ion-label>
+          <div class="level-img-container">
+            <img class="level-img" src="./assets/profile/cooking-level-high.png"/>
+          </div>
+          <span class="level-label">Chefkoch</span>
+        </ion-label>
         <ion-radio value="2"></ion-radio>
       </ion-item>
     </ion-list>
   </div>
 
   <div *ngIf="status == 3">
-    <ion-list radio-group [(ngModel)] = "profile.money">
-      <ion-list-header>Wie viel Geld gibts du durchschnittlich für Essen aus?</ion-list-header>
-      <ion-item>
-        <ion-label>wenig</ion-label>
+    <ion-list class="moneylist" radio-group [(ngModel)] = "profile.money">
+      <h2 class="list-heading">Dein Budget</h2>
+
+      <ion-item class="moneytype">
+       <ion-label>
+        <div class="money-img-container">
+          <img class="money-img" src="./assets/profile/budget-low.png"/>
+        </div>
+        <span class="money-label">wenig</span>
+      </ion-label>
         <ion-radio checked="true" value="0"></ion-radio>
       </ion-item>
 
-      <ion-item>
-        <ion-label>mittel</ion-label>
+      <ion-item class="moneytype">
+        <ion-label>
+          <div class="money-img-container">
+            <img class="money-img" src="./assets/profile/budget-mid.png"/>
+          </div>
+          <span class="money-label">mittel</span>
+        </ion-label>
         <ion-radio value="1"></ion-radio>
       </ion-item>
 
-      <ion-item>
-        <ion-label>viel</ion-label>
+      <ion-item class="moneytype">
+        <ion-label>
+          <div class="money-img-container">
+            <img class="money-img" src="./assets/profile/budget-high.png"/>
+          </div>
+          <span class="money-label">viel</span>
+        </ion-label>
         <ion-radio value="2"></ion-radio>
       </ion-item>
     </ion-list>
   </div>
 
   <div *ngIf="status == 4">
-    <ion-list radio-group [(ngModel)] = "profile.time">
-      <ion-list-header>Wie wiel Zeit möchtest du aufwenden?</ion-list-header>
-      <ion-item>
-        <ion-label>wenig</ion-label>
+    <ion-list class="timelist" radio-group [(ngModel)] = "profile.time">
+      <h2 class="list-heading">Dein Zeitaufwand</h2>
+
+      <ion-item class="timetype">
+        <ion-label>
+          <div class="time-img-container">
+            <img class="time-img" src="./assets/profile/time-low.png"/>
+          </div>
+          <span class="time-label">kurz</span>
+        </ion-label>
         <ion-radio checked="true" value="0"></ion-radio>
       </ion-item>
 
-      <ion-item>
-        <ion-label>mittel</ion-label>
+      <ion-item class="timetype">
+        <ion-label>
+          <div class="time-img-container">
+            <img class="time-img" src="./assets/profile/time-mid.png"/>
+          </div>
+          <span class="time-label">mittel</span>
+        </ion-label>
         <ion-radio value="1"></ion-radio>
       </ion-item>
 
-      <ion-item>
-        <ion-label>viel</ion-label>
+      <ion-item class="timetype">
+        <ion-label>
+          <div class="time-img-container">
+            <img class="time-img" src="./assets/profile/time-high.png"/>
+          </div>
+          <span class="time-label">lang</span>
+        </ion-label>
         <ion-radio value="2"></ion-radio>
       </ion-item>
     </ion-list>
   </div>
 
   <div *ngIf="status == 5">
-    <ion-list radio-group [(ngModel)] = "profile.calories">
-      <ion-list-header>Wie viele Kalorien möchtest du zu dir nehmen?</ion-list-header>
-      <ion-item>
-        <ion-label>wenig</ion-label>
+    <ion-list class="calorieslist" radio-group [(ngModel)] = "profile.calories">
+      <h2 class="list-heading">Deine Wunschkalorien</h2>
+
+
+      <ion-item class="caloriestype">
+        <ion-label>
+          <div class="calories-img-container">
+            <img class="calories-img cal-low" src="./assets/profile/calories.png"/>
+          </div>
+          <span class="calories-label">wenig</span>
+        </ion-label>
         <ion-radio checked="true" value="0"></ion-radio>
       </ion-item>
 
-      <ion-item>
-        <ion-label>mittel</ion-label>
+      <ion-item class="caloriestype">
+        <ion-label>
+          <div class="calories-img-container">
+            <img class="calories-img cal-mid" src="./assets/profile/calories.png"/>
+          </div>
+          <span class="calories-label">mittel</span>
+        </ion-label>
         <ion-radio value="1"></ion-radio>
       </ion-item>
 
-      <ion-item>
-        <ion-label>viel</ion-label>
+      <ion-item class="caloriestype">
+        <ion-label>
+          <div class="calories-img-container">
+            <img class="calories-img cal-high" src="./assets/profile/calories.png"/>
+          </div>
+          <span class="calories-label">viel</span>
+        </ion-label>
         <ion-radio value="2"></ion-radio>
       </ion-item>
     </ion-list>
   </div>
 
   <div *ngIf="status == 6">
-    <ion-list>
-      <ion-list-header>Übersicht</ion-list-header>
-      <ion-item>
-        <ion-label>Ernährungstyp: {{labels.nutrition[profile.nutrition]}}</ion-label>
+    <ion-list class="uebersicht">
+      <h2 class="list-heading">Deine Übersicht</h2>
+      <ion-item class="uebersicht-entry">
+        <ion-label>
+          <div class="picked-heading">Dein Ernährungstyp</div>
+          <div class="picked bold">{{labels.nutrition[profile.nutrition]}}</div>
+        </ion-label>
       </ion-item>
-      <ion-item>
-        <ion-label>Schwierigkeitsgrad: {{labels.level[profile.level]}}</ion-label>
+
+      <ion-item class="uebersicht-entry">
+        <ion-label>
+          <div class="picked-heading">Dein Kochlevel</div>
+          <div class="picked bold">{{labels.level[profile.level]}}</div>
+        </ion-label>
       </ion-item>
-      <ion-item>
-        <ion-label>Budget: {{labels.money[profile.money]}}</ion-label>
+      <ion-item class="uebersicht-entry">
+        <ion-label>
+          <div class="picked-heading">Dein Budget</div>
+          <div class="picked bold">{{labels.money[profile.money]}}</div>
+        </ion-label>
       </ion-item>
-      <ion-item>
-        <ion-label>Zeitaufwand: {{labels.time[profile.time]}}</ion-label>
+      <ion-item class="uebersicht-entry">
+        <ion-label>
+          <div class="picked-heading">Dein Zeitaufwand</div>
+          <div class="picked bold">{{labels.time[profile.time]}}</div>
+        </ion-label>
       </ion-item>
-      <ion-item>
-        <ion-label>Kalorien: {{labels.calories[profile.calories]}}</ion-label>
+      <ion-item class="uebersicht-entry">
+        <ion-label>
+          <div class="picked-heading">Deine Wunschkalorien</div>
+          <div class="picked bold">{{labels.calories[profile.calories]}}</div>
+        </ion-label>
       </ion-item>
 
     </ion-list>
   </div>
 
-
-  <button ion-button *ngIf="status > 1"(click)="previous()">Zurück</button>
-  <button ion-button *ngIf="status < 6"(click)="next()">Weiter</button>
-  <button ion-button *ngIf="status == 6"(click)="submit()">Absenden</button>
-  <a (click)="cancel()">Überspringen</a>
+  <div class="bottom-buttons">
+    <button ion-button full *ngIf="status < 6" (click)="next()">Weiter</button>
+    <button ion-button full  *ngIf="status == 6" (click)="submit()">Absenden</button>
+    <button ion-button outline class="backbutton" *ngIf="status > 1" (click)="previous()">Zurück</button>
+    <button ion-button full clear  *ngIf="status < 6" (click)="cancel()">Überspringen</button>
+  </div>
 
 </ion-content>
