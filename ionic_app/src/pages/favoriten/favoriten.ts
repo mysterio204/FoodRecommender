@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, Nav, Tabs, ModalController} from 'ionic-angular';
+import { NavController, Tabs, ModalController} from 'ionic-angular';
 
-import { RezeptePage } from '../rezepte/rezepte';
 import {SettingsPage} from '../settings/settings';
 
 /*
@@ -18,7 +17,7 @@ export class FavoritenPage {
 
   tab:Tabs;
 
-  constructor(public navCtrl: NavController, private nav: Nav,  public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController,  public modalCtrl: ModalController) {
     this.tab = this.navCtrl.parent;
   }
 

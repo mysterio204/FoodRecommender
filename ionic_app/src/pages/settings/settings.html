@@ -24,4 +24,64 @@
 
 <ion-content padding>
 
+  <ion-list>
+    <ion-list-header>
+      Dein Nutzerprofil
+    </ion-list-header>
+    <ion-item>
+      <ion-label>Dein Ernährungstyp</ion-label>
+      <ion-select [(ngModel)] = "profile.nutrition">
+        <ion-option value="0">Alles Esser</ion-option>
+        <ion-option value="1">Vegetarisch</ion-option>
+        <ion-option value="2">Vegan</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Dein Kochlevel</ion-label>
+      <ion-select [(ngModel)] = "profile.level">
+        <ion-option value="0">Anfänger</ion-option>
+        <ion-option value="1">Alltagskoch</ion-option>
+        <ion-option value="2">Chefkoch</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Dein Budget</ion-label>
+      <ion-select [(ngModel)] = "profile.money">
+        <ion-option value="0">wenig</ion-option>
+        <ion-option value="1">mittel</ion-option>
+        <ion-option value="2">viel</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Dein Zeitaufwand</ion-label>
+      <ion-select [(ngModel)] = "profile.time">
+        <ion-option value="0">kurz</ion-option>
+        <ion-option value="1">mittel</ion-option>
+        <ion-option value="2">lang</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Dein Wunschkalorien</ion-label>
+      <ion-select [(ngModel)] = "profile.calories">
+        <ion-option value="0">wenig</ion-option>
+        <ion-option value="1">mittel</ion-option>
+        <ion-option value="2">viel</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <button class="saveProfile" ion-button full (click)="saveProfile()">Speichern</button>
+
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Deine Zutaten
+    </ion-list-header>
+    <button class="toIngred" ion-button full (click)="toIngredients()">Neu bewerten</button>
+  </ion-list>
+
 </ion-content>
