@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
+import {SettingsPage} from '../settings/settings';
 
 /*
   Generated class for the Vorraete page.
@@ -13,10 +14,16 @@ import { NavController } from 'ionic-angular';
 })
 export class VorraetePage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {}
 
   ionViewDidLoad() {
     console.log('Hello VorraetePage Page');
+  }
+
+
+  toSettings(){
+    let modal = this.modalCtrl.create(SettingsPage);
+    modal.present();
   }
 
 }

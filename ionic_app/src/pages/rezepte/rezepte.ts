@@ -4,6 +4,7 @@ import { RecipeService } from '../../services/recipe-service';
 import { FoodDetailPage } from '../food-detail/food-detail';
 import {SwiperPage} from '../swiper/swiper'
 import { ProfilePage } from  '../profile/profile';
+import {SettingsPage} from '../settings/settings';
 
 /*
   Generated class for the Rezepte page.
@@ -69,6 +70,12 @@ export class RezeptePage {
 
   toProfile(){
     let modal = this.modalCtrl.create(ProfilePage);
+    modal.present();
+  }
+
+
+  toSettings(){
+    let modal = this.modalCtrl.create(SettingsPage);
     modal.present();
   }
 

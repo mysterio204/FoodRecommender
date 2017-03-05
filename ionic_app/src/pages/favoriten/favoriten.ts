@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, Nav, Tabs } from 'ionic-angular';
+import { NavController, Nav, Tabs, ModalController} from 'ionic-angular';
 
 import { RezeptePage } from '../rezepte/rezepte';
+import {SettingsPage} from '../settings/settings';
 
 /*
   Generated class for the Favoriten page.
@@ -17,7 +18,7 @@ export class FavoritenPage {
 
   tab:Tabs;
 
-  constructor(public navCtrl: NavController, private nav: Nav) {
+  constructor(public navCtrl: NavController, private nav: Nav,  public modalCtrl: ModalController) {
     this.tab = this.navCtrl.parent;
   }
 
@@ -28,6 +29,12 @@ export class FavoritenPage {
 
   toRecipes(){
     this.tab.select(0);
+  }
+
+
+  toSettings(){
+    let modal = this.modalCtrl.create(SettingsPage);
+    modal.present();
   }
 
 }

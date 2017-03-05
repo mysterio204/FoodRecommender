@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-
+import { NavController, ModalController } from 'ionic-angular';
+import {SettingsPage} from '../settings/settings';
 /*
   Generated class for the Einkaufsliste page.
 
@@ -13,10 +13,16 @@ import { NavController } from 'ionic-angular';
 })
 export class EinkaufslistePage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController,  public modalCtrl: ModalController) {}
 
   ionViewDidLoad() {
     console.log('Hello EinkaufslistePage Page');
+  }
+
+
+  toSettings(){
+    let modal = this.modalCtrl.create(SettingsPage);
+    modal.present();
   }
 
 }

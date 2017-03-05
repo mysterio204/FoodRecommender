@@ -9,6 +9,7 @@ import { FoodDetailPage } from '../pages/food-detail/food-detail';
 import { ProfilePage } from '../pages/profile/profile';
 import {SwiperPage} from '../pages/swiper/swiper'
 import{ FavoriteProvider } from '../providers/favorite-provider';
+import {SettingsPage } from '../pages/settings/settings';
 
 
 import { TabsPage } from '../pages/tabs/tabs';
@@ -24,7 +25,8 @@ import { SwingModule } from 'angular2-swing';
     FoodDetailPage,
     TabsPage,
     ProfilePage,
-    SwiperPage
+    SwiperPage,
+    SettingsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -40,7 +42,8 @@ import { SwingModule } from 'angular2-swing';
     FoodDetailPage,
     TabsPage,
     ProfilePage,
-    SwiperPage
+    SwiperPage,
+    SettingsPage
   ],
   providers: [FavoriteProvider,{provide: ErrorHandler, useClass: IonicErrorHandler}],
 
