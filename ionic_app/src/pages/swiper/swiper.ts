@@ -36,7 +36,7 @@ export class SwiperPage {
                 public navParams : NavParams) {
 
       this.nutrition = navParams.get("nutrition");
-      
+
       this.likeList = [];
       this.dislikeList = [];
 
@@ -81,12 +81,12 @@ export class SwiperPage {
         let hexCode = this.decimalToHex(min, 2);
 
         if (x < 0) {
-            color = '#FF' + hexCode + hexCode;
+            color = '#ef7366';
         } else {
-            color = '#' + hexCode + 'FF' + hexCode;
+            color = '#6acb8e';
         }
 
-        element.style.background = color;
+        element.style.color = color;
         element.style['transform'] = `translate3d(0, 0, 0) translate(${x}px, ${y}px) rotate(${r}deg)`;
     }
 

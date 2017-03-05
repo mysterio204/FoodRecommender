@@ -10,7 +10,104 @@ page-food-detail {
     text-align: left;
   }
 
+
+  ion-header,
+  ion-toolbar,
+  ion-title,
+  .toolbar-background-md{
+    background-color: white;
+
+  }
+
+  .back-button{
+    color: #659D32;
+    z-index: 200;
+  }
+
+
+  .toolbar-ios ion-title{
+    border-bottom: 1px solid rgba(70,70,70, 0.3);
+  }
+
   .favorite{
     font-size: 30px;
   }
+
+  .rating-details{
+    color: #659D32;
+    width: 100%;
+    background-color: rgba(256,256,256, 0.8);
+    text-align: center;
+    display: inline-block;
+    height: 30px;
+    position: absolute;
+    padding-top: 4px;
+    margin-top: -33px;
+    z-index: 100;
+
+  }
+
+  .detailimage{
+    width: 100%;
+    height: auto;
+  }
+
+  .ingr-table-container>h4{
+    padding-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .ingr-table-container>span{
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  .ingr-table-container{
+    width: 100%;
+  }
+
+  .ingr-table{
+    background-color: whitesmoke;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  .ingr-tr{
+    padding-bottom: 0px;
+    display: inline-block;
+    width: 90%;
+    padding-left: 10%;
+    float: left;
+  }
+
+  .ingr-menge{
+    width: 50%;
+    float: left;
+    font-weight: 900;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .ingr-name{
+    width: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .ingr-tr:last-of-type>.ingr-name,
+  .ingr-tr:last-of-type>.ingr-menge{
+    padding-bottom: 15px;
+  }
+
+  .ingr-tr:first-of-type>.ingr-name,
+  .ingr-tr:first-of-type>.ingr-menge{
+    padding-top: 15px;
+  }
+
+  .ingr-info{
+    font-style: italic;
+  }
+
+
 }

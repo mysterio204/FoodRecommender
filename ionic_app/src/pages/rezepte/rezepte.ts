@@ -25,6 +25,7 @@ export class RezeptePage {
   profileEmpty:boolean;
   ingrEmpty:boolean;
   dismiss:boolean;
+  loading:boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private recipeService: RecipeService,  public modalCtrl: ModalController) {
 
@@ -32,15 +33,17 @@ export class RezeptePage {
       this.profileEmpty = false;
       this.ingrEmpty = true;
       this.dismiss = false;
+      this.loading = true;
 
       this.recipeService.getAll().subscribe(
         data => {
           this.recipesList = data;
+          this.loading = false;
         },
         err => {
           console.log(err)
         },
-          () => console.log(this.recipesList[0])
+          () => this.loading = false
       );
 
   }

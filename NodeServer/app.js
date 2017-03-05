@@ -139,7 +139,7 @@
 
         server.get("/api/get/all", function (req, res) {
             var profile = req.params[0];
-            queryString = "SELECT * FROM `kochbar_recipes` ORDER BY average DESC LIMIT 20";
+            queryString = "SELECT * FROM `kochbar_recipes` ORDER BY RAND() LIMIT 20";
             query(queryString, function (err, data) {
                 res.send(data);
             });
