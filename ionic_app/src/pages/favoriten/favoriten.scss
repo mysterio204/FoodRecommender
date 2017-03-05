@@ -1,3 +1,18 @@
 page-favoriten {
+  .toolbar-background,
+  .toolbar-title {
+    background-color: #659D32 !important;
+  }
 
+
+  .favorites-container{
+    text-align:center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+
+  .fav-heart{
+     color: #ef7366;
+  }
 }

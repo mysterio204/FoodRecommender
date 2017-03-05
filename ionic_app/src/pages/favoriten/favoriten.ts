@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Nav, Tabs } from 'ionic-angular';
+
+import { RezeptePage } from '../rezepte/rezepte';
 
 /*
   Generated class for the Favoriten page.
@@ -13,10 +15,19 @@ import { NavController } from 'ionic-angular';
 })
 export class FavoritenPage {
 
-  constructor(public navCtrl: NavController) {}
+  tab:Tabs;
+
+  constructor(public navCtrl: NavController, private nav: Nav) {
+    this.tab = this.navCtrl.parent;
+  }
 
   ionViewDidLoad() {
     console.log('Hello FavoritenPage Page');
+  }
+
+
+  toRecipes(){
+    this.tab.select(0);
   }
 
 }
