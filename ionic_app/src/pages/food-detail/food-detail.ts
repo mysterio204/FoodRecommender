@@ -147,8 +147,10 @@ export class FoodDetailPage {
 
   }
 
-  cook(){
-    console.log("cook");
+  openPage(event, item) {
+      this.navCtrl.push(CookingModePage, {
+          recipe: item
+      });
   }
 
 }
