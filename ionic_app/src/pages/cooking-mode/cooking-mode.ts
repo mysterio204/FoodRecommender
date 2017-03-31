@@ -538,15 +538,562 @@ export class CookingModePage {
     }
     preparations = [
         {
-            "procedure": "Zwiebel klein schneiden",
-            "link": "https://www.youtube.com/embed/IcFs6vBa1qY"
+            "procedure": "Essen mit Stäbchen",
+            "link": "https://www.youtube.com/embed/CuDjP2-s79k"
         },
         {
-            "procedure": "Paprika fein würfeln",
-            "link": "https://www.youtube.com/embed/sjVeeZ6ZVr8"
+            "procedure": "Reispapierrollen falten",
+            "link": "https://www.youtube.com/embed/YihI1UVtjlY"
+        },
+
+        {
+            "procedure": "Granatapfel entkernen",
+            "link": "https://www.youtube.com/embed/qnkn3U3lwDg"
         },
         {
-            "procedure": "Paprika gefüllt",
-            "link": "https://www.youtube.com/embed/zqd2InS-vz0"
+            "procedure": "Messer schärfen",
+            "link": "https://www.youtube.com/embed/Gz22DExuewI"
+        },
+        {
+            "procedure": "Kirschtomaten schneiden",
+            "link": "https://www.youtube.com/embed/Ych9mrd3OHM"
+        },
+        {
+            "procedure": "Schnitzel klopfen",
+            "link": "https://www.youtube.com/embed/zEMLkk1jgR8"
+        },
+        {
+            "procedure": "Karotten stiften",
+            "link": "https://www.youtube.com/embed/gWs3_nMXrUI"
+        },
+        {
+            "procedure": "Zitrusfrucht filetieren",
+            "link": "https://www.youtube.com/embed/gWs3_nMXrUI"
+        },
+        {
+            "procedure": "Ingwer schälen",
+            "link": "https://www.youtube.com/embed/x8O5P-c350k"
+        },
+        {
+            "procedure": "Zwiebeln hacken",
+            "link": "https://www.youtube.com/embed/O5xv2w55oGM"
+        },
+        {
+            "procedure": "Kartoffelwürfel",
+            "link": "https://www.youtube.com/embed/n8XjIaZ6M4Y"
+           
+        },
+        {
+            "procedure": "Tournieren",
+            "link": "https://www.youtube.com/embed/Vb1udZhc3Gg"
+        },   
+        {
+            "procedure": "Frühlingszwiebeln",
+            "link": "https://www.youtube.com/embed/uaE2sLGuyzQ"
+        },
+        {
+            "procedure": "Kartoffelstreifen",
+            "link": "https://www.youtube.com/embed/GxGmEIHnyF8"
+        },
+        {
+            "procedure": "Lauchstreifen",
+            "link": "https://www.youtube.com/embed/h94simUBQak"
+        },
+        {
+            "procedure": "Tomatenstreifen",
+            "link": "https://www.youtube.com/embed/P7QAgWKbTKU"
+        },
+        {
+            "procedure": "Karotten",
+            "link": "https://www.youtube.com/embed/eKA4OOgASY"
+        },
+        {
+            "procedure": "Tomatenwürfel",
+            "link": "https://www.youtube.com/embed/p-KFAPzuYQ4"
+        },
+        {
+            "procedure": "Zwiebelstreifen",
+            "link": "https://www.youtube.com/embed/-rvsn9tMLd8"
+        },
+        {
+            "procedure": "Zwiebelringe",
+            "link": "https://www.youtube.com/embed/_hhZRFX4vdg"
+        },
+        {
+            "procedure": "Paprikarauten",
+            "link": "https://www.youtube.com/embed/UY5UjJ8zxvw"
+        },
+        {
+            "procedure": "Fenchel",
+            "link": "https://www.youtube.com/embed/5fPFewSzvmc"
+        },
+        {
+            "procedure": "Pommes",
+            "link": "https://www.youtube.com/embed/GF7I5Y95g60"
+        },
+        {
+            "procedure": "Wok Zwiebeln",
+            "link": "https://www.youtube.com/embed/gZy6Vqe9UZk"
+        },
+        {
+            "procedure": "Tomaten häuten",
+            "link": "https://www.youtube.com/embed/WT_tZ43XwEE"
+        },
+        {
+            "procedure": "Kürbis schälen",
+            "link": "https://www.youtube.com/embed/SdxUkiDTHIk"
+        },
+        {
+            "procedure": "Schokolade schmelzen",
+            "link": "https://www.youtube.com/embed/YxdHkDG5xYM"
+        },
+        {
+            "procedure": "Vanilleschoten",
+            "link": "https://www.youtube.com/embed/wjAFTK3zF7A"
+        },
+        {
+            "procedure": "Fleisch braten",
+            "link": "https://www.youtube.com/embed/MQS3n0yRxw"
+        },
+        {
+            "procedure": "Avocado",
+            "link": "https://www.youtube.com/embed/4yMhmybM8WY"
+        },
+        {
+            "procedure": "Fisch braten",
+            "link": "https://www.youtube.com/embed/cqCVK421Mzo"
+        },
+        {
+            "procedure": "Huhn zerlegen",
+            "link": "https://www.youtube.com/embed/SBeq1t1gT6w"
+        },
+        {
+            "procedure": "Knoblauch",
+            "link": "https://www.youtube.com/embed/jPiIo8Z-ecc"
+        },
+        {
+            "procedure": "Paprika",
+            "link": "https://www.youtube.com/embed/kPWQqCWn2nM"
+        },
+        {
+            "procedure": "Rhabarber",
+            "link": "https://www.youtube.com/embed/mFtq_3Pn9lo"
+        },
+        {
+            "procedure": "Spargel",
+            "link": "https://www.youtube.com/embed/oRyhPL1Iizw"
+        },
+        {
+            "procedure": "Fleischrücken ",
+            "link": "https://www.youtube.com/embed/MKV0qmZAKYY"
+        },
+        {
+            "procedure": "Zitrusfrucht auspressen",
+            "link": "https://www.youtube.com/embed/wRP9y0ThgfU"
+        },
+        {
+            "procedure": "Zitronengras",
+            "link": "https://www.youtube.com/embed/gEso6LMSi40  "
+            
+        },
+        {
+            "procedure": "Zitrusfrucht schälen",
+            "link": "https://www.youtube.com/embed/FakphPqkU5g"
+        },
+
+         {
+             "procedure": "Champignons schälen",
+             "link": "https://www.youtube.com/embed/Egn7Tx1cXak"
+         },
+         {
+             "procedure": "Artischocken schälen",
+             "link": "https://www.youtube.com/embed/85EwuO9Op4c&list=PLuQOcm2t-VKNaQWKrSwOJ6qhHFrg28zQu&index=10"
+         },
+         {
+             "procedure": "Schmetterling Schnitt",
+             "link": "https://www.youtube.com/embed/JA5vIUfkhJs&list=PLuQOcm2t-VKNaQWKrSwOJ6qhHFrg28zQu&index=13"
+         },
+         {
+             "procedure": "Kräuter hacken",
+             "link": "https://www.youtube.com/embed/71iTRK5L3dE&list=PLuQOcm2t-VKNaQWKrSwOJ6qhHFrg28zQu&index=16"
+         },
+         {
+             "procedure": "Mango schneiden",
+             "link": "https://www.youtube.com/embed/qu8u-no38Kc&list=PLuQOcm2t-VKNaQWKrSwOJ6qhHFrg28zQu&index=21"
+         },
+         {
+             "procedure": "Schalentier",
+             "link": "https://www.youtube.com/embed/Nt2fyH6ewZM&list=PLuQOcm2t-VKNaQWKrSwOJ6qhHFrg28zQu&index=22"
+         },
+         {
+             "procedure": "Austern",
+             "link": "https://www.youtube.com/embed/7vUFGqg2jZ4&list=PLuQOcm2t-VKNaQWKrSwOJ6qhHFrg28zQu&index=23"
+         },
+         {
+             "procedure": "Eier pochieren",
+             "link": "https://www.youtube.com/embed/rc49HEM5MlY&list=PLuQOcm2t-VKNaQWKrSwOJ6qhHFrg28zQu&index=26"
+         },
+         {
+             "procedure": "Kartoffeln schälen",
+             "link": "https://www.youtube.com/embed/Jh4tELgFbYE"
+         },
+         {
+             "procedure": "Kartoffeln schälen",
+             "link": "https://www.youtube.com/embed/Jh4tELgFbYE"
+         },
+         {
+             "procedure": "Seezunge braten",
+             "link": "https://www.youtube.com/embed/WpMjV4bdGU0&list=PL5MmtYfAtJX1NGHxrlVHw08ljOmHtc12- "
+         },
+         {
+             "procedure": "Thunfisch braten",
+             "link": "https://www.youtube.com/embed/i1-qujoaAP0&list=PL5MmtYfAtJX1NGHxrlVHw08ljOmHtc12-&index=2 "
+         },
+              {
+                  "procedure": "Thunfisch braten",
+                  "link": "https://www.youtube.com/embed/i1-qujoaAP0&list=PL5MmtYfAtJX1NGHxrlVHw08ljOmHtc12-&index=2 "
+              },
+              {
+                  "procedure": "Garnelen hacken",
+                  "link": "https://www.youtube.com/embed/i1-qujoaAP0&list=PL5MmtYfAtJX1NGHxrlVHw08ljOmHtc12-&index=2 "
+              },
+              {
+                  "procedure": "Austern von der Schale lösen",
+                  "link": "https://www.youtube.com/embed/PTCuyqS72F4&index=22&list=PL5MmtYfAtJX1JmGCm0i5rfKBW3EFfRjis "
+              },
+              {
+                  "procedure": "Salat waschen",
+                  "link": "https://www.youtube.com/embed/KKNeB8EFwPc&list=PL5MmtYfAtJX1JmGCm0i5rfKBW3EFfRjis&index=26 "
+              },
+              {
+                  "procedure": "Rucola waschen",
+                  "link": "https://www.youtube.com/embed/SHmjrhe6D00&list=PL5MmtYfAtJX1JmGCm0i5rfKBW3EFfRjis&index=27 "
+              },
+              {
+                  "procedure": "Römersalat waschen",
+                  "link": "https://www.youtube.com/embed/DhzJSmSNswM&index=28&list=PL5MmtYfAtJX1JmGCm0i5rfKBW3EFfRjis "
+              },
+              {
+                  "procedure": "Radicchio waschen",
+                  "link": "https://www.youtube.com/embed/EdbkhpxI5Wg&list=PL5MmtYfAtJX1JmGCm0i5rfKBW3EFfRjis&index=29 "
+              },
+              {
+                  "procedure": "Hähnchen zerteilen",
+                  "link": "https://www.youtube.com/embed/UdptEdoO62Y&list=PL5MmtYfAtJX1JmGCm0i5rfKBW3EFfRjis&index=31"
+              },
+              {
+                  "procedure": "Kalbsfilet entsehnen",
+                  "link": "https://www.youtube.com/embed/nrPTRxfUch8&list=PL5MmtYfAtJX1JmGCm0i5rfKBW3EFfRjis&index=33"
+              },
+              {
+                  "procedure": "Kalbsfilet hacken",
+                  "link": "https://www.youtube.com/embed/nrPTRxfUch8&list=PL5MmtYfAtJX1JmGCm0i5rfKBW3EFfRjis&index=33"
+              },
+              {
+                  "procedure": "Lachsfilet würfeln  ",
+                  "link": "https://www.youtube.com/embed/bfacgQTMVd8&list=PL5MmtYfAtJX1JmGCm0i5rfKBW3EFfRjis&index=36"
+              },
+              {
+                  "procedure": "Lachs würfeln",
+                  "link": "https://www.youtube.com/embed/bfacgQTMVd8&list=PL5MmtYfAtJX1JmGCm0i5rfKBW3EFfRjis&index=36 "
+
+              },
+              {
+                  "procedure": "Langustenfleisch lösen",
+                  "link": "https://www.youtube.com/embed/PUKPGDih0dA&list=PL5MmtYfAtJX1JmGCm0i5rfKBW3EFfRjis&index=37 "
+              },
+              {
+                  "procedure": "Feigen würfeln",
+                  "link": "https://www.youtube.com/embed/1Li85NoY1TU&index=43&list=PL5MmtYfAtJX1JmGCm0i5rfKBW3EFfRjis "
+              },
+              {
+                  "procedure": "Spargel schälen",
+                  "link": "https://www.youtube.com/embed/7lxy9OLa3VQ&list=PL5MmtYfAtJX1JmGCm0i5rfKBW3EFfRjis&index=50 "
+              },
+              {
+                  "procedure": "Granatapfel schälen",
+                  "link": "https://www.youtube.com/embed/cuYtlP7e3tw "
+              },
+              {
+                  "procedure": "Avocados schneiden",
+                  "link": "https://www.youtube.com/embed/rG_HQVhmU8w "
+              },
+              {
+                  "procedure": "Sternfrucht schneiden",
+                  "link": "https://www.youtube.com/embed/o0boUz-ccIQ"
+              },
+              {
+                  "procedure": "Karambole schneiden",
+                  "link": "https://www.youtube.com/embed/o0boUz-ccIQ "
+              },
+              {
+                  "procedure": "Kiwano schneiden",
+                  "link": "https://www.youtube.com/embed/HK0qR1Ru63A "
+              },
+              {
+                  "procedure": "Drachenfrucht schneiden",
+                  "link": "https://www.youtube.com/embed/w_wde8yIopg "
+              },
+              {
+                  "procedure": "Kokosnuss öffnen",
+                  "link": "https://www.youtube.com/embed/vGiIeHLgrwo "
+
+              },
+              {
+                  "procedure": "Pomelo schälen",
+                  "link": "https://www.youtube.com/embed/9q2sTIn7G88"
+              },
+              {
+                  "procedure": "Physalis schneiden",
+                  "link": "https://www.youtube.com/embed/ReXy2CcQbTY "
+              },
+              {
+                  "procedure": "Orange filetieren",
+                  "link": "https://www.youtube.com/embed/pJEEJpfCKAg"
+              },
+              {
+                  "procedure": "Karamellisieren",
+                  "link": "https://www.youtube.com/embed/O53hWuwMe88 "
+              },
+              {
+                  "procedure": "Tomate blanchieren",
+                  "link": "https://www.youtube.com/embed/D8dQPEK94fE "
+              },
+              {
+                  "procedure": "ablöschen",
+                  "link": "https://www.youtube.com/embed/OLQWgk1I6jc&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=2 "
+              },
+              {
+                  "procedure": "Mais lösen",
+                  "link": "https://www.youtube.com/embed/dzbFf3BEwbs&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=10 "
+              },
+              {
+                  "procedure": "Hackfleisch braten",
+                  "link": "https://www.youtube.com/embed/j0FuoOnZu7s&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=17 "
+              },
+              {
+                  "procedure": "Apfel schneiden",
+                  "link": "https://www.youtube.com/embed/EjSfsk0HZ5M&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=19 "
+              },
+              {
+                  "procedure": "Honigmelone schneiden",
+                  "link": "https://www.youtube.com/embed/DbJBf_F8Kgw&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=20"
+              },
+              {
+                  "procedure": "Pflaumen schneiden",
+                  "link": "https://www.youtube.com/embed/NKt-iOfunW0&index=28&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Kiwi schälen",
+                  "link": "https://www.youtube.com/embed/iamQ_S7_KHk&index=33&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Oliven schneiden",
+                  "link": "https://www.youtube.com/embed/liz1NwzRXfc&index=34&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml"
+              },
+              {
+                  "procedure": "Oliven entkernen",
+                  "link": "https://www.youtube.com/embed/liz1NwzRXfc&index=34&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Kohl schneiden",
+                  "link": "https://www.youtube.com/embed/lEbE2KdBueo&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=37 "
+              },
+              {
+                  "procedure": "Milch kochen",
+                  "link": "https://www.youtube.com/embed/#Ayi8CPkepew&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=42 "
+              },
+              {
+                  "procedure": "Eier trennen",
+                  "link": "https://www.youtube.com/embed/45R9KIwmgdY&index=44&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Speck braten",
+                  "link": "https://www.youtube.com/embed/TXUWWqtmRZg&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=45 "
+              },
+              {
+                  "procedure": "Nudeln kochen",
+                  "link": "https://www.youtube.com/embed/uBo5UfRTewI&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=47 "
+              },
+              {
+                  "procedure": "Frühlingszwiebel schneiden",
+                  "link": "https://www.youtube.com/embed/r79XjFEYLeM&index=48&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Hühnerbrust pochieren",
+                  "link": "https://www.youtube.com/embed/lqAYt2dPbeI&index=49&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Kräuter hacken",
+                  "link": "https://www.youtube.com/embed/lA9KFdIyaqU&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=50 "
+              },
+              {
+                  "procedure": "Beeren waschen",
+                  "link": "https://www.youtube.com/embed/psS_4OUsXFg&index=51&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Passieren",
+                  "link": "https://www.youtube.com/embed/EU5BDvrciiY&index=53&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Blumenkohl schneiden",
+                  "link": "https://www.youtube.com/embed/GRCi0GnaLsc&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=54 "
+              },
+              {
+                  "procedure": "Eischnee schlagen",
+                  "link": "https://www.youtube.com/embed/JOqy3_JzPWc&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=56 "
+              },
+              {
+                  "procedure": "Soße andicken",
+                  "link": "https://www.youtube.com/embed/M48AVcF3wdc&index=58&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Mly"
+              },
+              {
+                  "procedure": "Soße abbinden",
+                  "link": "https://www.youtube.com/embed/M48AVcF3wdc&index=58&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Öl erhitzen",
+                  "link": "https://www.youtube.com/embed/14U3ZInsBn0&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=59 "
+              },
+              {
+                  "procedure": "Mehlschwitze anrühren",
+                  "link": "https://www.youtube.com/embed/XZaRZRpitSo&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=61 "
+              },
+              {
+                  "procedure": "Pilze putzen",
+                  "link": "https://www.youtube.com/embed/pW_fk_m_EVs&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=62 "
+              },
+              {
+                  "procedure": "Muskatnuss reiben",
+                  "link": "https://www.youtube.com/embed/hWcGIwu7nC0&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=64 "
+              },
+              {
+                  "procedure": "Kartoffeln kochen",
+                  "link": "https://www.youtube.com/embed/ok5kjt-rpSA&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=65 "
+              },
+              {
+                  "procedure": "Käse reiben",
+                  "link": "https://www.youtube.com/embed/eUXJJfnsN0E&index=71&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Käse hobeln",
+                  "link": "https://www.youtube.com/embed/eUXJJfnsN0E&index=71&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml"
+              },
+              {
+                  "procedure": "Burger formen",
+                  "link": "https://www.youtube.com/embed/1zBlnXR4x8U&index=74&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Panieren",
+                  "link": "https://www.youtube.com/embed/4cFKGr6tygA&index=77&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Nüsse rösten",
+                  "link": "https://www.youtube.com/embed/YZedD8zlafk&index=83&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Zitrone reiben",
+                  "link": "https://www.youtube.com/embed/OquFh7YojhE&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=87 "
+              },
+              {
+                  "procedure": "Vanillemark auskratzen",
+                  "link": "https://www.youtube.com/embed/OrIpKLRabYw&index=86&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml "
+              },
+              {
+                  "procedure": "Limette reiben",
+                  "link": "https://www.youtube.com/embed/OquFh7YojhE&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=87"
+              },
+              {
+                  "procedure": "Julienne schneiden",
+                  "link": "https://www.youtube.com/embed/EA15mROQQUU&list=PLXG7nf0UStAC0q4mwtKPjftKXjy_ep0Ml&index=90 "
+              },
+              {
+                  "procedure": "Spargel kochen",
+                  "link": "https://www.youtube.com/embed/UgItELPwHcI&list=PLUyg-1_pxN_VhRainQCMDT8nknkWpm_xp "
+              },
+              {
+                  "procedure": "Wraps falten",
+                  "link": "https://www.youtube.com/embed/16gILax2KJ4&list=PLUyg-1_pxN_VhRainQCMDT8nknkWpm_xp&index=10 "
+              },
+              {
+                  "procedure": "Steak braten",
+                  "link": "https://www.youtube.com/embed/I_zZSglQthU&index=15&list=PLUyg-1_pxN_VhRainQCMDT8nknkWpm_xp "
+              },
+              {
+                  "procedure": "Rouladen wickeln ",
+                  "link": "https://www.youtube.com/embed/7GaZCvospXo&list=PLUyg-1_pxN_VhRainQCMDT8nknkWpm_xp&index=18 "
+              },
+              {
+                  "procedure": "Wild marinieren",
+                  "link": "https://www.youtube.com/embed/7CbreKnQbpo&list=PLUyg-1_pxN_VhRainQCMDT8nknkWpm_xp&index=19 "
+              },
+              {
+                  "procedure": "Wild beizen",
+                  "link": "https://www.youtube.com/embed/7CbreKnQbpo&list=PLUyg-1_pxN_VhRainQCMDT8nknkWpm_xp&index=19 "
+              },
+              {
+                  "procedure": "Reis kochen",
+                  "link": "https://www.youtube.com/embed/fCyHdcC88Ow&index=20&list=PLUyg-1_pxN_VhRainQCMDT8nknkWpm_xp "
+              },
+              {
+                  "procedure": "Eier kochen",
+                  "link": "https://www.youtube.com/embed/qSfvpQ23eXY&list=PLUyg-1_pxN_VhRainQCMDT8nknkWpm_xp&index=23 "
+              },
+              {
+                  "procedure": "Sellerie schälen",
+                  "link": "https://www.youtube.com/embed/94a4fjNQ76U&index=25&list=PLUyg-1_pxN_VhRainQCMDT8nknkWpm_xp "
+              },
+              {
+                  "procedure": "Rouladen binden",
+                  "link": "https://www.youtube.com/embed/rGaS3lG1ZCs "
+              },
+              {
+                  "procedure": "dämpfen",
+                  "link": "https://www.youtube.com/embed/nxU5yLHPzUM "
+              },
+              {
+                  "procedure": "Dünsten",
+                  "link": "https://www.youtube.com/embed/wyGxy3iOCew"
+              },
+              {
+                  "procedure": "Kalmar waschen",
+                  "link": "https://www.youtube.com/embed/wyGxy3iOCew "
+              },
+              {
+                  "procedure": "Sepia waschen",
+                  "link": "https://www.youtube.com/embed/wyGxy3iOCew "
+              },
+              {
+                  "procedure": "Austern vorbereiten",
+                  "link": "https://www.youtube.com/embed/pbaPhN2ObWY "
+              },
+              {
+                  "procedure": "Hummer auslösen",
+                  "link": "https://www.youtube.com/embed/vjKy8RI87Vg "
+              },
+              {
+                  "procedure": "Schmoren",
+                  "link": "https://www.youtube.com/embed/Xy3PwAIylSQ    "
+              },
+              {
+                  "procedure": "Kaisergranat zerteilen",
+                  "link": "https://www.youtube.com/embed/w5jtSJBHK24 "
+              },
+              {
+                  "procedure": "Garnelen vorbereiten",
+                  "link": "https://www.youtube.com/embed/HhlcOIizE5w"
+              },
+              {
+                  "procedure": "Pflaumen dörren",
+                  "link": "https://www.youtube.com/embed/3LNAFLFfe48 "
+              },
+              {
+                  "procedure": "Apfelringe dörren",
+                  "link": "https://www.youtube.com/embed/3LNAFLFfe48 "
+              },
+
+        {
+            "procedure": "Knollensellerie schneiden",
+            "link": "https://www.youtube.com/embed/LoNatsOGwWQ"
         }];
 }
