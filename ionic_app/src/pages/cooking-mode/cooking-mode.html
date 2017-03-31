@@ -1,0 +1,47 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Kochmodus
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div id="content">
+    <div id="timer-container">
+        <button class="button button-large, semi-transparent-button" ion-button (click)="handleTimerOne()" id="countdownTimer1" style="visibility : hidden;"></button>
+        <button class="button button-large, semi-transparent-button" ion-button (click)="handleTimerTwo()" id="countdownTimer2" style="visibility : hidden;"></button>
+        <button class="button button-large, semi-transparent-button" ion-button (click)="handleTimerThree()" id="countdownTimer3" style="visibility : hidden;"></button>
+        <button class="button button-large, semi-transparent-button" ion-button (click)="handleTimerFour()" id="countdownTimer4" style="visibility : hidden;"></button>
+        <button ion-fab icon-only (click)="showCountdownAlert()">
+          <ion-icon name="clock"></ion-icon>
+        </button>  
+        </div>
+        <div class="slider-container">
+            <ion-slides #RecipeStepSlider (ionSlideDidChange)="stepChanged()" [options]="{pager:true}" class="slider">
+                <ion-slide #StepSlide *ngFor="let slide of data?.Slides, let i = index">
+                    <ion-card class="card">
+                        <ion-card-title>
+                            <h2 id="recipe-title">Titel</h2>
+                            
+                            <!--    <div class="video-container"><iframe width="853" height="480" src="https://www.youtube.com/embed/z9Ul9ccDOqE" frameborder="0" allowfullscreen</iframe</div> -->
+                            <div class="video-container">
+                                <iframe id="prepareVideo" src="https://www.youtube.com/embed/z9Ul9ccDOqE" frameborder="0" allowfullscreen></iframe>
+
+                            </div>
+                        </ion-card-title>
+                        <!--div Container für Medien, verweist auf Inhalt im TypeScript-File-->
+                        <div class="media-container" #MediaContainer [innerHTML]="safeMediaHtml">
+
+                        </div>
+                        <ion-card-content>
+                            <!--div Container für Anweisungen, verweist auf Inhalt im TypeScript-File-->
+                            <div class="instructions-container" #InstructionContainer [innerHTML]="safeInstructionHtml">
+                            </div>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-slide>
+            </ion-slides>
+        </div>
+    </div>
+</ion-content>
