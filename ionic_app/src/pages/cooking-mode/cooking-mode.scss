@@ -1,0 +1,39 @@
+cooking-mode {
+
+  .media-container {
+    width: 100%;
+    height: 56.25vw;
+  }
+
+  .semi-transparent-button {
+    background: #fff; /* fallback color for old browsers */
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  #content {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+  }
+
+  .slider-container,
+  .timer-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .slider-container {
+    height: 100vh;
+  }
+
+  #timer-container {
+    z-index: 10;
+  }
+
+  .ion-card {
+    height: 100vh;
+  }
+}
