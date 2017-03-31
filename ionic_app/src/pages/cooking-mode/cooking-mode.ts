@@ -10,11 +10,11 @@ import { AlertController } from 'ionic-angular';
 
 @Component({
     selector: 'page-cooking-mode',
-    templateUrl: 'home.html', 
+    templateUrl: 'cooking-mode.html', 
 })
    
 
-export class HomePage {
+export class CookingModePage {
     @ViewChild('RecipeStepSlider') recipeStepSlider: Slides;
     @ViewChild('TitleContainer') titleContainer: ElementRef;
     @ViewChild('MediaContainer') mediaContainer: ElementRef;
