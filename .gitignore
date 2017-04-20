@@ -17,7 +17,7 @@ npm-debug.log*
 .tmp/
 .versions/
 
-www/
+
 $RECYCLE.BIN/
 
 .DS_Store
