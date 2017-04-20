@@ -1,0 +1,53 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"NativeStorage\"><param name=\"browser-package\" value=\"NativeStorage\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.foodrecommender100010"
+        },
+        "cordova-plugin-nativestorage": {
+            "PACKAGE_NAME": "com.ionicframework.foodrecommender100010"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
+            "id": "cordova-plugin-nativestorage.mainHandle",
+            "pluginId": "cordova-plugin-nativestorage",
+            "clobbers": [
+                "NativeStorage"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
+            "id": "cordova-plugin-nativestorage.LocalStorageHandle",
+            "pluginId": "cordova-plugin-nativestorage"
+        },
+        {
+            "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
+            "id": "cordova-plugin-nativestorage.NativeStorageError",
+            "pluginId": "cordova-plugin-nativestorage"
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-console": "1.0.4",
+        "cordova-plugin-nativestorage": "2.2.2"
+    }
+}

@@ -5,6 +5,8 @@ import { FoodDetailPage } from '../food-detail/food-detail';
 import {SwiperPage} from '../swiper/swiper'
 import { ProfilePage } from  '../profile/profile';
 import {SettingsPage} from '../settings/settings';
+import { NativeStorage } from 'ionic-native';
+
 
 /*
   Generated class for the Rezepte page.
@@ -51,6 +53,13 @@ export class RezeptePage {
 
 
   openPage(event, item) {
+
+    NativeStorage.setItem('activeRecipe', item)
+      .then(
+      () => console.log('Stored item!'),
+      error => console.error('Error storing item', error)
+    );
+
      this.navCtrl.push(FoodDetailPage, {
        recipe: item
      });

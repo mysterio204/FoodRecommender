@@ -49,8 +49,9 @@
     },
     "cordova-plugin-nativestorage": {
         "source": {
-            "type": "registry",
-            "id": "cordova-plugin-nativestorage"
+            "type": "git",
+            "url": "https://github.com/TheCocoaProject/cordova-plugin-nativestorage",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}
