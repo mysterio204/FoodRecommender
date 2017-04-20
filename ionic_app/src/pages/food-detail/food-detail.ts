@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 import{FavoriteProvider} from '../../providers/favorite-provider'
+import{CookingModePage} from '../../cooking-mode/cooking-mode'
 
 /*
  Generated class for the FoodDetail page.
