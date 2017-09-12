@@ -39,7 +39,6 @@ export class EinkaufslistePage {
   grocerylist: string[] = [];
   supplylist:Array<any>;
 
-  //Dummy data
   neededGroceries:Array<any>;
   missingGroceries:Array<any>;
 
@@ -74,7 +73,6 @@ export class EinkaufslistePage {
   //Save the supplies in a variable and start extracting the needed ingredients from the recipe
   saveSupplies(data){
     this.supplylist = data;
-    console.log("supplylist:");
     if(this.supplylist == undefined){
       this.supplylist = [];
     }
@@ -118,17 +116,11 @@ export class EinkaufslistePage {
         //CHeck whether an element of the needed groceries list equals an element of the supply list
         if(this.title1.trim() == this.title2.trim()){
           subtractedAmount = this.subtractTwoAmounts(this.neededGroceries[i].menge.trim(), this.supplylist[j].menge.trim());
-          console.log("TREFFER");
-          console.log(this.neededGroceries[i]);
-          console.log(this.supplylist[j]);
-          console.log(subtractedAmount);
           //Add the grocery to the missing list if the supply amount is lower than the needed amount
           if(this.separateAmount(subtractedAmount) > 0){
             missingGrocery = this.neededGroceries[i];
             missingGrocery.menge = subtractedAmount;
             this.missingGroceries.push(missingGrocery);
-            console.log('Zu wenig vorhanden');
-            //console.log(this.missingGroceries);
           }
           //Mark the current grocery as available
           missingGrocery = [];
@@ -141,14 +133,16 @@ export class EinkaufslistePage {
       if(missingGrocery == undefined){
         missingGrocery = this.neededGroceries[i];
         this.missingGroceries.push(missingGrocery);
-        console.log("Nicht vorhanden");
-        console.log(this.missingGroceries);
       }
       missingGrocery = undefined;
 
     }
     this.itemlist = this.missingGroceries;
-    console.log(this.itemlist);
+  }
+
+  //Add a single grocery to the item list containing items which the user needs to buy
+  addSingleGrocery(singleGrocery){
+    this.itemlist.push(singleGrocery);
   }
 
   subtractTwoAmounts(amount1, amount2){

@@ -65,6 +65,11 @@ export class VorraetePage {
     );
   }
 
+  //Return the list containing the supply
+  getSupplyList(){
+    return this.itemlist;
+  }
+
   getNewId(){
     let id = (Math.floor(Math.random() * 1000) + 1); 
     console.log(id);
